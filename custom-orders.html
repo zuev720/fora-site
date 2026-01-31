@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальные заказы | ООО "Фора" - Изготовление по чертежам</title>
+    <meta name="description" content="Изготовление соединительных элементов по вашим чертежам. Нестандартные радиусы, индивидуальные размеры, любые цвета RAL.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html">Каталог продукции</a></li>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html" class="active">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79001234567" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (900) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Индивидуальные заказы</span>
+            </div>
+            <h1 class="page-title">Изготовим по вашим чертежам</h1>
+            <p class="page-subtitle">Нестандартные радиусы, индивидуальные размеры, любые цвета RAL</p>
+        </div>
+    </section>
+
+    <!-- What We Can Make -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Что мы можем изготовить</h2>
+                <p>Наши возможности позволяют выполнить практически любой индивидуальный заказ</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-compass-drafting"></i>
+                    </div>
+                    <h3>Нестандартные радиусы</h3>
+                    <p>Любые значения радиуса, не только стандартные R50/R70. Изготовление по вашим требованиям.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Индивидуальные размеры</h3>
+                    <p>Монтажные пластины любых размеров, нестандартная длина и ширина элементов.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-circle-dot"></i>
+                    </div>
+                    <h3>Крепежные отверстия</h3>
+                    <p>Нестандартное количество и расположение отверстий под крепеж по вашим чертежам.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3>Специальные формы</h3>
+                    <p>Изготовление элементов под конкретные профильные системы и нестандартные конфигурации.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Любой цвет RAL</h3>
+                    <p>Порошковая окраска в любой цвет по каталогу RAL. Полная палитра на выбор.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Комплектующие</h3>
+                    <p>Специальные комплектующие элементы по вашему техническому заданию.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Process -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Процесс заказа</h2>
+                <p>Четыре простых шага от идеи до готового продукта</p>
+            </div>
+
+            <div class="process-timeline" style="margin-bottom: 0;">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-file-upload"></i></div>
+                    <h4>Отправьте чертежи</h4>
+                    <p>Загрузите файлы, опишите задачу, укажите количество</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-search"></i></div>
+                    <h4>Техническая проработка</h4>
+                    <p>Анализ возможности, предложение решений, расчет стоимости</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Согласование</h4>
+                    <p>Получите КП, утвердите чертежи, заключите договор</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-industry"></i></div>
+                    <h4>Производство</h4>
+                    <p>Опытный образец (опционально), серийное производство</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Форма технического запроса</h2>
+                <p>Заполните форму и мы ответим в течение 4 рабочих часов</p>
+            </div>
+
+            <div class="contact-form" style="max-width: 800px; margin: 0 auto;">
+                <form id="customOrderForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Компания</label>
+                            <input type="text" name="company">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Описание задачи *</label>
+                        <textarea name="description" rows="4" placeholder="Опишите, какие элементы вам нужны, особенности конструкции, область применения..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Прикрепить файлы</label>
+                        <div class="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Перетащите файлы сюда или нажмите для выбора</p>
+                            <p style="font-size: 0.85rem; color: #6c757d;">Поддерживаемые форматы: PDF, DWG, DXF, STEP, IGS, JPEG, PNG</p>
+                            <input type="file" name="files" multiple accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.jpg,.jpeg,.png">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Количество (шт)</label>
+                            <input type="number" name="quantity" min="1" placeholder="Укажите количество">
+                        </div>
+                        <div class="form-group">
+                            <label>Желаемый срок</label>
+                            <input type="text" name="deadline" placeholder="Например: 2 недели">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Дополнительные требования</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sample" name="requirements[]" value="sample">
+                                <label for="sample">Требуется образец для тестирования</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="consultation" name="requirements[]" value="consultation">
+                                <label for="consultation">Нужна техническая консультация</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="drawings" name="requirements[]" value="drawings">
+                                <label for="drawings">Требуется доработка чертежей</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Отправить запрос
+                    </button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- RAL Palette -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Палитра цветов RAL</h2>
+                <p>Популярные цвета для чистых помещений. По запросу доступна полная палитра RAL.</p>
+            </div>
+
+            <div class="ral-palette">
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #f4f4f4;"></div>
+                    <span>RAL 9003</span>
+                    <small>Белый сигнальный</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #d7d7d7;"></div>
+                    <span>RAL 7035</span>
+                    <small>Светло-серый</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #a5a5a5;"></div>
+                    <span>RAL 9006</span>
+                    <small>Серебристый</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #e6d690;"></div>
+                    <span>RAL 1015</span>
+                    <small>Светлая слоновая кость</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #9da1aa;"></div>
+                    <span>RAL 7001</span>
+                    <small>Серебристо-серый</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #ffffff; border: 2px solid #ddd;"></div>
+                    <span>RAL 9010</span>
+                    <small>Чистый белый</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #b8b8b8;"></div>
+                    <span>RAL 7038</span>
+                    <small>Агатовый серый</small>
+                </div>
+                <div class="ral-color">
+                    <div class="color-swatch" style="background: #1e5387;"></div>
+                    <span>RAL 5010</span>
+                    <small>Горечавково-синий</small>
+                </div>
+            </div>
+
+            <div class="info-box" style="max-width: 600px; margin: 40px auto 0;">
+                <p><strong>Стандартный цвет:</strong> RAL 9003 (белый сигнальный) — наиболее востребован для чистых помещений</p>
+                <p style="margin-bottom: 0;"><strong>Под заказ:</strong> любой цвет по каталогу RAL без ограничений</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimum Order & Terms -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Условия изготовления</h2>
+            </div>
+
+            <div class="cards-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Минимальная партия</h3>
+                    <p>От <strong>10 штук</strong> для стандартных позиций<br>От <strong>50 штук</strong> для нестандартных изделий</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Сроки изготовления</h3>
+                    <p><strong>Опытный образец:</strong> 5-7 рабочих дней<br><strong>Мелкая серия (до 100 шт):</strong> 10-14 дней<br><strong>Крупная серия:</strong> по согласованию</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <h3>Стоимость</h3>
+                    <p>Рассчитывается индивидуально в зависимости от сложности, объема и сроков</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для чистых помещений с 2009 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                        <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Производственная, 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог"><i class="fas fa-download"></i></button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат"><i class="fas fa-comments"></i></button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок"><i class="fas fa-phone"></i></button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Всего позиций:</span><span id="cartTotal">0</span></div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled><i class="fas fa-paper-plane"></i> Отправить запрос КП</button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled><i class="fas fa-save"></i> Сохранить спецификацию</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Modals -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="tel" name="phone" placeholder="Телефон" required></div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-phone"></i> Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы свяжемся с вами в течение 4 рабочих часов</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Custom order form submission
+        document.getElementById('customOrderForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successModal').classList.add('active');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

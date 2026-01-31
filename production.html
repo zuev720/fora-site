@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производство | ООО "Фора" - Полный цикл от отливки до готового элемента</title>
+    <meta name="description" content="Производство полного цикла алюминиевых соединительных элементов. Собственный литейный цех, ЧПУ обработка, порошковая окраска.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html">Каталог продукции</a></li>
+                        <li><a href="production.html" class="active">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79001234567" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (900) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Производство</span>
+            </div>
+            <h1 class="page-title">Производство полного цикла</h1>
+            <p class="page-subtitle">От алюминиевой заготовки до готового элемента. Собственный литейный цех, токарно-фрезерный участок и цех порошковой окраски.</p>
+        </div>
+    </section>
+
+    <!-- Production Timeline -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Технологический цикл</h2>
+                <p>Полный контроль качества на каждом этапе производства</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Stage 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-fire"></i> Отливка алюминиевых заготовок</h3>
+                        <p>Литье осуществляется на современном оборудовании с использованием качественного алюминиевого сплава марки АД31.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Плавильная печь для алюминия</li>
+                            <li><i class="fas fa-check"></i> Литье под давлением</li>
+                            <li><i class="fas fa-check"></i> Контроль химического состава сплава</li>
+                            <li><i class="fas fa-check"></i> Охлаждение и первичная обработка</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-sync-alt"></i> Токарная обработка на станках с ЧПУ</h3>
+                        <p>Высокоточная обработка на современных токарных станках с числовым программным управлением.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Точность обработки до 0,01 мм</li>
+                            <li><i class="fas fa-check"></i> Программирование под чертежи заказчика</li>
+                            <li><i class="fas fa-check"></i> Автоматическая смена инструментов</li>
+                            <li><i class="fas fa-check"></i> Контроль геометрии в процессе обработки</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-cog"></i> Фрезерная обработка</h3>
+                        <p>Создание сложных радиусных форм и обработка монтажных элементов на многокоординатных фрезерных центрах.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Создание сложных радиусных форм R50, R70</li>
+                            <li><i class="fas fa-check"></i> Обработка монтажных отверстий</li>
+                            <li><i class="fas fa-check"></i> Снятие фасок и финишная обработка</li>
+                            <li><i class="fas fa-check"></i> Многокоординатные фрезерные центры</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-cut"></i> Нарезка и подгонка размеров</h3>
+                        <p>Высокоточная резка по заданным размерам и калибровка элементов согласно чертежам.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Высокоточная резка по размерам</li>
+                            <li><i class="fas fa-check"></i> Калибровка элементов</li>
+                            <li><i class="fas fa-check"></i> Проверка соответствия чертежам</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-spray-can"></i> Порошковая окраска</h3>
+                        <p>Собственный цех порошковой окраски с полной подготовкой поверхности и полимеризацией покрытия.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Подготовка поверхности (обезжиривание, фосфатирование)</li>
+                            <li><i class="fas fa-check"></i> Окрасочная камера с рекуперацией порошка</li>
+                            <li><i class="fas fa-check"></i> Полимеризация в печи при 180-200°C</li>
+                            <li><i class="fas fa-check"></i> Толщина покрытия: 60-100 мкм</li>
+                            <li><i class="fas fa-check"></i> Любой цвет по каталогу RAL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">6</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-check-circle"></i> Контроль качества</h3>
+                        <p>Многоэтапный контроль качества на всех этапах производства, включая финальную проверку.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Проверка геометрических размеров</li>
+                            <li><i class="fas fa-check"></i> Контроль качества покрытия</li>
+                            <li><i class="fas fa-check"></i> Испытание на прочность крепления</li>
+                            <li><i class="fas fa-check"></i> Проверка комплектности</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">7</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-box"></i> Упаковка и логистика</h3>
+                        <p>Индивидуальная защитная упаковка и оперативная отгрузка транспортными компаниями по всей России.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Индивидуальная защитная упаковка</li>
+                            <li><i class="fas fa-check"></i> Маркировка партий</li>
+                            <li><i class="fas fa-check"></i> Комплектация заказов</li>
+                            <li><i class="fas fa-check"></i> Отгрузка транспортными компаниями</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Capabilities -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1500">0</div>
+                    <div class="stat-suffix">м²</div>
+                    <div class="stat-label">площадь производства</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-suffix"></div>
+                    <div class="stat-label">станков с ЧПУ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">элементов/месяц</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-suffix"></div>
+                    <div class="stat-label">специалистов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Оборудование и станки</h2>
+                <p>Современное оборудование для высокоточного производства</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-fire-alt"></i>
+                    </div>
+                    <h3>Литейный участок</h3>
+                    <p>Плавильные печи для алюминия, оборудование для литья под давлением, системы контроля состава сплава</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Токарные станки ЧПУ</h3>
+                    <p>Современные токарные центры с числовым программным управлением, точность обработки до 0,01 мм</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Фрезерные центры</h3>
+                    <p>Многокоординатные фрезерные станки для создания сложных радиусных форм и обработки поверхностей</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Участок резки</h3>
+                    <p>Высокоточное оборудование для резки и калибровки элементов по заданным размерам</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h3>Линия окраски</h3>
+                    <p>Камера порошковой окраски с рекуперацией, печь полимеризации, участок подготовки поверхности</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Лаборатория ОТК</h3>
+                    <p>Измерительное оборудование для контроля геометрии, толщины покрытия и качества продукции</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Certificates -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Сертификаты и стандарты</h2>
+                <p>Производство соответствует российским и международным стандартам качества</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Система менеджмента качества сертифицирована по международному стандарту ISO 9001:2015</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>ГОСТ Р</h3>
+                    <p>Продукция соответствует требованиям российских государственных стандартов</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Протоколы испытаний</h3>
+                    <p>Регулярные лабораторные испытания материалов и готовой продукции</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="documentation.html" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i> Скачать сертификаты
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="quick-request">
+        <div class="container">
+            <div class="request-content">
+                <div class="request-text">
+                    <h2>Посетите наше производство</h2>
+                    <p>Мы проводим экскурсии по производству для потенциальных клиентов и партнеров</p>
+                </div>
+                <form class="request-form" id="visitForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Компания">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Телефон" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-calendar-check"></i> Записаться на экскурсию
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для чистых помещений с 2009 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                        <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Производственная, 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог">
+            <i class="fas fa-download"></i>
+        </button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат">
+            <i class="fas fa-comments"></i>
+        </button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок">
+            <i class="fas fa-phone"></i>
+        </button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Всего позиций:</span>
+                <span id="cartTotal">0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled>
+                <i class="fas fa-paper-plane"></i> Отправить запрос КП
+            </button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled>
+                <i class="fas fa-save"></i> Сохранить спецификацию
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Callback Modal -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-phone"></i> Перезвоните мне
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

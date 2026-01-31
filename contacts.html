@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | ООО "Фора" - Свяжитесь с нами</title>
+    <meta name="description" content="Контакты ООО Фора. Отдел продаж, технический отдел, реквизиты компании. Адрес: Нижегородская обл., г. Павлово.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html">Каталог продукции</a></li>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79001234567" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (900) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Контакты</span>
+            </div>
+            <h1 class="page-title">Контакты</h1>
+            <p class="page-subtitle">Свяжитесь с нами удобным для вас способом</p>
+        </div>
+    </section>
+
+    <!-- Contact Cards -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <h4><i class="fas fa-shopping-cart"></i> Отдел продаж</h4>
+                    <p>Консультации по продукции, расчет стоимости, оформление заказов</p>
+                    <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                    <a href="tel:+79001234568"><i class="fas fa-phone"></i> +7 (900) 123-45-68</a>
+                    <a href="mailto:sales@fora-clean.ru"><i class="fas fa-envelope"></i> sales@fora-clean.ru</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gray-500);">
+                        <i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00 (МСК)
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <h4><i class="fas fa-cogs"></i> Технический отдел</h4>
+                    <p>Технические консультации, помощь с чертежами, индивидуальные заказы</p>
+                    <a href="tel:+79001234569"><i class="fas fa-phone"></i> +7 (900) 123-45-69</a>
+                    <a href="mailto:tech@fora-clean.ru"><i class="fas fa-envelope"></i> tech@fora-clean.ru</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gray-500);">
+                        <i class="fas fa-clock"></i> Пн-Пт: 9:00 - 17:00 (МСК)
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <h4><i class="fas fa-building"></i> Приёмная</h4>
+                    <p>Общие вопросы, документооборот, запись на посещение производства</p>
+                    <a href="tel:+79001234560"><i class="fas fa-phone"></i> +7 (900) 123-45-60</a>
+                    <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gray-500);">
+                        <i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00 (МСК)
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <h4><i class="fas fa-map-marker-alt"></i> Адрес</h4>
+                    <p><strong>Производство и офис:</strong></p>
+                    <p>606100, Нижегородская область,<br>г. Павлово, ул. Производственная, д. 15</p>
+                    <a href="#" style="margin-top: 15px; display: inline-block;"><i class="fas fa-route"></i> Построить маршрут</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <h2>Форма быстрого запроса</h2>
+                    <p style="color: var(--gray-600); margin: 15px 0 30px;">
+                        Заполните форму и мы свяжемся с вами в течение 2 часов в рабочее время
+                    </p>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Ваше имя *</label>
+                                    <input type="text" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Компания</label>
+                                    <input type="text" name="company">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон *</label>
+                                    <input type="tel" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Тема обращения</label>
+                                <select name="subject">
+                                    <option value="">Выберите тему</option>
+                                    <option value="quote">Запрос коммерческого предложения</option>
+                                    <option value="consultation">Техническая консультация</option>
+                                    <option value="custom">Индивидуальный заказ</option>
+                                    <option value="partnership">Партнерство</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Сообщение</label>
+                                <textarea name="message" rows="4" placeholder="Опишите ваш вопрос или задачу..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Отправить сообщение
+                            </button>
+                            <p class="form-note">
+                                Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>Реквизиты компании</h2>
+                    <p style="color: var(--gray-600); margin: 15px 0 30px;">
+                        Для подготовки договоров и бухгалтерских документов
+                    </p>
+                    
+                    <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: var(--shadow);">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">Полное наименование</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">Общество с ограниченной ответственностью "Фора"</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">Краткое наименование</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">ООО "Фора"</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">ИНН</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">5252012345</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">КПП</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">525201001</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">ОГРН</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">1095252001234</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">Юридический адрес</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">606100, Нижегородская обл., г. Павлово, ул. Производственная, д. 15</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">Расчетный счет</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">40702810100000012345</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">Банк</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">ПАО Сбербанк, г. Нижний Новгород</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600);">БИК</td>
+                                <td style="padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600;">042202603</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 0; color: var(--gray-600);">Корр. счет</td>
+                                <td style="padding: 12px 0; font-weight: 600;">30101810200000000603</td>
+                            </tr>
+                        </table>
+                        
+                        <a href="#" class="btn btn-outline" style="margin-top: 20px;">
+                            <i class="fas fa-download"></i> Скачать карточку компании
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <i class="fas fa-map-marked-alt"></i>
+                <div>
+                    <h3>Карта расположения</h3>
+                    <p>606100, Нижегородская обл., г. Павлово, ул. Производственная, д. 15</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Часто задаваемые вопросы</h2>
+            </div>
+
+            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <span>Как быстро вы ответите на запрос?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>В рабочие дни мы отвечаем на запросы в течение 2 часов. Коммерческие предложения готовятся в течение 4-8 рабочих часов в зависимости от сложности запроса.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Можно ли посетить ваше производство?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Да, мы проводим экскурсии по производству для потенциальных клиентов и партнеров. Для записи на экскурсию свяжитесь с нами по телефону или заполните форму на сайте.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Какая минимальная партия заказа?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Минимальная партия для стандартных позиций — от 10 штук. Для нестандартных изделий — от 50 штук. Возможно изготовление опытных образцов для тестирования.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Какие сроки изготовления?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Стандартная продукция со склада — отгрузка в течение 24 часов. Изготовление под заказ: мелкая серия — 10-14 дней, крупная серия — по согласованию.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Осуществляете ли вы доставку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Да, мы организуем доставку по всей России транспортными компаниями. Также возможен самовывоз со склада в г. Павлово. Стоимость доставки рассчитывается индивидуально.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для чистых помещений с 2009 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                        <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Производственная, 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог"><i class="fas fa-download"></i></button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат"><i class="fas fa-comments"></i></button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок"><i class="fas fa-phone"></i></button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Всего позиций:</span><span id="cartTotal">0</span></div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled><i class="fas fa-paper-plane"></i> Отправить запрос КП</button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled><i class="fas fa-save"></i> Сохранить спецификацию</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Modals -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="tel" name="phone" placeholder="Телефон" required></div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-phone"></i> Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Спасибо за обращение!</h3>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successModal').classList.add('active');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

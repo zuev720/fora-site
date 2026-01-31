@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог продукции | ООО "Фора" - Соединительные элементы для чистых помещений</title>
+    <meta name="description" content="Каталог алюминиевых соединительных элементов для чистых помещений. Угловые соединители R50/R70, соединители стена-пол, заглушки торцевые.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html" class="active">Каталог продукции</a></li>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79001234567" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (900) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+79001234567" class="mobile-phone">
+            <i class="fas fa-phone"></i> +7 (900) 123-45-67
+        </a>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Каталог продукции</span>
+            </div>
+            <h1 class="page-title">Каталог продукции</h1>
+            <p class="page-subtitle">Алюминиевые соединительные элементы для чистых помещений</p>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <span>Тип соединения</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="type-inner" value="inner-corner">
+                                <label for="type-inner">Стена-стена (внутренний угол)</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="type-outer" value="outer-corner">
+                                <label for="type-outer">Стена-стена (внешний угол)</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="type-wall-floor" value="wall-floor">
+                                <label for="type-wall-floor">Стена-пол</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="type-wall-ceiling" value="wall-ceiling">
+                                <label for="type-wall-ceiling">Стена-потолок</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="type-caps" value="caps">
+                                <label for="type-caps">Заглушки торцевые</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <span>Радиус профиля</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="radius-50" value="r50">
+                                <label for="radius-50">R50</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="radius-70" value="r70">
+                                <label for="radius-70">R70</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="radius-custom" value="custom">
+                                <label for="radius-custom">Другие радиусы (под заказ)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <span>Количество креплений</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="mount-1" value="1">
+                                <label for="mount-1">1 монтажная пластина</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="mount-2" value="2">
+                                <label for="mount-2">2 монтажные пластины</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="mount-3" value="3">
+                                <label for="mount-3">3 монтажные пластины</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <span>Цвет покрытия</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="color-white" value="ral9003">
+                                <label for="color-white">RAL 9003 (белый)</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="color-gray" value="ral7035">
+                                <label for="color-gray">RAL 7035 (светло-серый)</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="color-silver" value="ral9006">
+                                <label for="color-silver">RAL 9006 (серебристый)</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="color-custom" value="custom">
+                                <label for="color-custom">Другие цвета (под заказ)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-cta">
+                        <p>Не нашли нужный элемент?</p>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm">
+                            <i class="fas fa-drafting-compass"></i> Заказать по чертежам
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-content">
+                    <div class="products-header">
+                        <p class="products-count">Найдено <strong>12</strong> товаров</p>
+                        <div class="products-sort">
+                            <label>Сортировка:</label>
+                            <select>
+                                <option value="popular">По популярности</option>
+                                <option value="name">По названию</option>
+                                <option value="new">По новизне</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid">
+                        <!-- Product Card 1 -->
+                        <div class="product-card" data-product-id="corner-r50-inner-1">
+                            <div class="product-image">
+                                <img src="images/corner-r50.png" alt="Угловой соединитель R50">
+                                <span class="product-badge">Хит продаж</span>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R50 (внутренний)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                    <span>52×52 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-card" data-product-id="corner-r50-outer-1">
+                            <div class="product-image">
+                                <img src="images/corner-r50.png" alt="Угловой соединитель R50">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R50 (внешний)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                    <span>52×52 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="product-card" data-product-id="corner-r70-inner-1">
+                            <div class="product-image">
+                                <i class="fas fa-cube"></i>
+                                <span class="product-badge">Новинка</span>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R70 (внутренний)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R70</span>
+                                    <span>72×72 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="product-card" data-product-id="corner-r70-outer-1">
+                            <div class="product-image">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R70 (внешний)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R70</span>
+                                    <span>72×72 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="product-card" data-product-id="wall-floor-r50-1">
+                            <div class="product-image">
+                                <i class="fas fa-layer-group"></i>
+                                <span class="product-badge">Хит продаж</span>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Соединители стена-пол</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Соединитель стена-пол R50</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                    <span>L=500 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="product-card" data-product-id="wall-floor-r70-1">
+                            <div class="product-image">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Соединители стена-пол</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Соединитель стена-пол R70</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R70</span>
+                                    <span>L=500 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 -->
+                        <div class="product-card" data-product-id="wall-ceiling-r50-1">
+                            <div class="product-image">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Соединители стена-потолок</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Соединитель стена-потолок R50</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                    <span>L=500 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 -->
+                        <div class="product-card" data-product-id="wall-ceiling-r70-1">
+                            <div class="product-image">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Соединители стена-потолок</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Соединитель стена-потолок R70</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R70</span>
+                                    <span>L=500 мм</span>
+                                    <span>2 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 9 -->
+                        <div class="product-card" data-product-id="cap-r50-1">
+                            <div class="product-image">
+                                <i class="fas fa-stop"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая R50</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                    <span>52×52 мм</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 10 -->
+                        <div class="product-card" data-product-id="cap-r70-1">
+                            <div class="product-image">
+                                <i class="fas fa-stop"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая R70</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R70</span>
+                                    <span>72×72 мм</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 11 -->
+                        <div class="product-card" data-product-id="corner-r50-3mount">
+                            <div class="product-image">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R50 (3 крепления)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                    <span>52×52×52 мм</span>
+                                    <span>3 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 12 -->
+                        <div class="product-card" data-product-id="corner-r70-3mount">
+                            <div class="product-image">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R70 (3 крепления)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R70</span>
+                                    <span>72×72×72 мм</span>
+                                    <span>3 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для чистых помещений с 2009 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                        <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Производственная, 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог">
+            <i class="fas fa-download"></i>
+        </button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат">
+            <i class="fas fa-comments"></i>
+        </button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок">
+            <i class="fas fa-phone"></i>
+        </button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-inbox"></i>
+                <p>Добавьте товары в запрос</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Всего позиций:</span>
+                <span id="cartTotal">0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled>
+                <i class="fas fa-paper-plane"></i> Отправить запрос КП
+            </button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled>
+                <i class="fas fa-save"></i> Сохранить спецификацию
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Callback Modal -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                </div>
+                <div class="form-group">
+                    <select name="time">
+                        <option value="">Удобное время для звонка</option>
+                        <option value="asap">Как можно скорее</option>
+                        <option value="morning">Утром (9:00-12:00)</option>
+                        <option value="day">Днём (12:00-17:00)</option>
+                        <option value="evening">Вечером (17:00-19:00)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-phone"></i> Перезвоните мне
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

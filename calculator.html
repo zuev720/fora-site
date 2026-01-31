@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор материалов | ООО "Фора" - Расчет потребности</title>
+    <meta name="description" content="Калькулятор расчета потребности материалов для чистых помещений. Рассчитайте количество соединительных элементов онлайн.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html">Каталог продукции</a></li>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79001234567" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (900) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Калькулятор материалов</span>
+            </div>
+            <h1 class="page-title">Калькулятор материалов</h1>
+            <p class="page-subtitle">Рассчитайте количество соединительных элементов для вашего помещения</p>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h2><i class="fas fa-calculator"></i> Калькулятор расчета</h2>
+                    <p>Введите параметры помещения для расчета потребности в материалах</p>
+                </div>
+                
+                <div class="calculator-body">
+                    <!-- Room Parameters -->
+                    <div class="calc-section">
+                        <h4><i class="fas fa-ruler-combined"></i> Параметры помещения</h4>
+                        <div class="calc-inputs">
+                            <div class="calc-input">
+                                <label>Длина стен (м)</label>
+                                <input type="number" id="roomLength" min="0" step="0.1" value="10" placeholder="0">
+                            </div>
+                            <div class="calc-input">
+                                <label>Ширина стен (м)</label>
+                                <input type="number" id="roomWidth" min="0" step="0.1" value="6" placeholder="0">
+                            </div>
+                            <div class="calc-input">
+                                <label>Высота (м)</label>
+                                <input type="number" id="roomHeight" min="0" step="0.1" value="3" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Type -->
+                    <div class="calc-section">
+                        <h4><i class="fas fa-sliders-h"></i> Тип профиля</h4>
+                        <div class="calc-radio-group">
+                            <div class="calc-radio">
+                                <input type="radio" id="profileR50" name="profileType" value="r50" checked>
+                                <label for="profileR50">R50 (радиус 50 мм)</label>
+                            </div>
+                            <div class="calc-radio">
+                                <input type="radio" id="profileR70" name="profileType" value="r70">
+                                <label for="profileR70">R70 (радиус 70 мм)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elements to Calculate -->
+                    <div class="calc-section">
+                        <h4><i class="fas fa-check-square"></i> Элементы для расчета</h4>
+                        <div class="calc-checkboxes">
+                            <div class="calc-checkbox">
+                                <input type="checkbox" id="includeCorners" checked>
+                                <label for="includeCorners">
+                                    <strong>Угловые соединители</strong>
+                                    <small>Внутренние углы стена-стена</small>
+                                </label>
+                            </div>
+                            <div class="calc-checkbox">
+                                <input type="checkbox" id="includeWallFloor" checked>
+                                <label for="includeWallFloor">
+                                    <strong>Соединители стена-пол</strong>
+                                    <small>По периметру пола</small>
+                                </label>
+                            </div>
+                            <div class="calc-checkbox">
+                                <input type="checkbox" id="includeWallCeiling" checked>
+                                <label for="includeWallCeiling">
+                                    <strong>Соединители стена-потолок</strong>
+                                    <small>По периметру потолка</small>
+                                </label>
+                            </div>
+                            <div class="calc-checkbox">
+                                <input type="checkbox" id="includeCaps" checked>
+                                <label for="includeCaps">
+                                    <strong>Заглушки торцевые</strong>
+                                    <small>Для окончаний профилей</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculate Button -->
+                    <button class="btn btn-primary btn-block" id="calculateBtn">
+                        <i class="fas fa-calculator"></i> Рассчитать
+                    </button>
+
+                    <!-- Results -->
+                    <div class="calc-results" id="calcResults" style="display: none;">
+                        <h4><i class="fas fa-clipboard-list"></i> Результаты расчета</h4>
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <span class="result-label">Угловые соединители</span>
+                                <span class="result-value" id="resultCorners">0 шт.</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Соединители стена-пол</span>
+                                <span class="result-value" id="resultWallFloor">0 шт.</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Соединители стена-потолок</span>
+                                <span class="result-value" id="resultWallCeiling">0 шт.</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Заглушки торцевые</span>
+                                <span class="result-value" id="resultCaps">0 шт.</span>
+                            </div>
+                        </div>
+                        <div class="calc-actions">
+                            <button class="btn btn-primary" id="addResultsToCart">
+                                <i class="fas fa-plus"></i> Добавить в запрос КП
+                            </button>
+                            <button class="btn btn-outline" id="downloadSpec">
+                                <i class="fas fa-download"></i> Скачать спецификацию
+                            </button>
+                            <a href="contacts.html" class="btn btn-outline">
+                                <i class="fas fa-phone"></i> Получить консультацию
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Box -->
+            <div class="info-box" style="max-width: 900px; margin: 40px auto 0;">
+                <p><strong><i class="fas fa-info-circle"></i> Обратите внимание:</strong></p>
+                <p>Данный калькулятор предоставляет приблизительный расчет для стандартного прямоугольного помещения. Для помещений сложной конфигурации или при наличии дополнительных требований рекомендуем обратиться к нашим специалистам для точного расчета.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для чистых помещений с 2009 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                        <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Производственная, 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог"><i class="fas fa-download"></i></button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат"><i class="fas fa-comments"></i></button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок"><i class="fas fa-phone"></i></button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Всего позиций:</span><span id="cartTotal">0</span></div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled><i class="fas fa-paper-plane"></i> Отправить запрос КП</button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled><i class="fas fa-save"></i> Сохранить спецификацию</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Modals -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="tel" name="phone" placeholder="Телефон" required></div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-phone"></i> Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Спасибо!</h3>
+            <p>Результаты добавлены в запрос КП</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Calculator specific logic
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const length = parseFloat(document.getElementById('roomLength').value) || 0;
+            const width = parseFloat(document.getElementById('roomWidth').value) || 0;
+            const height = parseFloat(document.getElementById('roomHeight').value) || 0;
+            
+            const profileType = document.querySelector('input[name="profileType"]:checked').value;
+            
+            const includeCorners = document.getElementById('includeCorners').checked;
+            const includeWallFloor = document.getElementById('includeWallFloor').checked;
+            const includeWallCeiling = document.getElementById('includeWallCeiling').checked;
+            const includeCaps = document.getElementById('includeCaps').checked;
+            
+            // Calculate perimeter
+            const perimeter = 2 * (length + width);
+            
+            // Standard element length is 0.5m
+            const elementLength = 0.5;
+            
+            // Calculate quantities
+            let corners = 0;
+            let wallFloor = 0;
+            let wallCeiling = 0;
+            let caps = 0;
+            
+            if (includeCorners) {
+                corners = 4; // Standard rectangular room has 4 corners
+            }
+            
+            if (includeWallFloor) {
+                wallFloor = Math.ceil(perimeter / elementLength);
+            }
+            
+            if (includeWallCeiling) {
+                wallCeiling = Math.ceil(perimeter / elementLength);
+            }
+            
+            if (includeCaps) {
+                // Caps for door openings etc., estimate based on perimeter
+                caps = Math.ceil(perimeter / 5) * 2; // Approximately 2 caps per 5m
+                if (caps < 4) caps = 4; // Minimum 4 caps
+            }
+            
+            // Update results
+            document.getElementById('resultCorners').textContent = corners + ' шт.';
+            document.getElementById('resultWallFloor').textContent = wallFloor + ' шт.';
+            document.getElementById('resultWallCeiling').textContent = wallCeiling + ' шт.';
+            document.getElementById('resultCaps').textContent = caps + ' шт.';
+            
+            // Show results
+            document.getElementById('calcResults').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('calcResults').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Download specification
+        document.getElementById('downloadSpec')?.addEventListener('click', function() {
+            const profileType = document.querySelector('input[name="profileType"]:checked').value.toUpperCase();
+            const length = document.getElementById('roomLength').value;
+            const width = document.getElementById('roomWidth').value;
+            
+            let spec = '=== СПЕЦИФИКАЦИЯ МАТЕРИАЛОВ ===\n';
+            spec += 'ООО "Фора"\n';
+            spec += 'www.fora-clean.ru\n\n';
+            spec += 'Параметры помещения:\n';
+            spec += `- Длина: ${length} м\n`;
+            spec += `- Ширина: ${width} м\n`;
+            spec += `- Тип профиля: ${profileType}\n\n`;
+            spec += 'Расчет материалов:\n';
+            spec += `- Угловые соединители ${profileType}: ${document.getElementById('resultCorners').textContent}\n`;
+            spec += `- Соединители стена-пол ${profileType}: ${document.getElementById('resultWallFloor').textContent}\n`;
+            spec += `- Соединители стена-потолок ${profileType}: ${document.getElementById('resultWallCeiling').textContent}\n`;
+            spec += `- Заглушки торцевые ${profileType}: ${document.getElementById('resultCaps').textContent}\n\n`;
+            spec += 'Для получения коммерческого предложения\n';
+            spec += 'свяжитесь с нами:\n';
+            spec += 'Тел: +7 (900) 123-45-67\n';
+            spec += 'Email: sales@fora-clean.ru\n';
+            
+            const blob = new Blob([spec], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'specification_fora.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>

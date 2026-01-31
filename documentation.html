@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техническая документация | ООО "Фора" - Чертежи, 3D-модели, спецификации</title>
+    <meta name="description" content="Техническая документация для соединительных элементов. Чертежи PDF/DWG, 3D-модели STEP, спецификации, монтажные инструкции.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html">Каталог продукции</a></li>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html" class="active">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79001234567" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (900) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Техническая документация</span>
+            </div>
+            <h1 class="page-title">Техническая документация</h1>
+            <p class="page-subtitle">Чертежи, 3D-модели, спецификации и инструкции для специалистов</p>
+        </div>
+    </section>
+
+    <!-- Full Catalog Download -->
+    <section class="content-section">
+        <div class="container">
+            <div style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: white; padding: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="color: white; margin-bottom: 10px;">Полный каталог продукции 2026</h2>
+                    <p style="margin: 0; opacity: 0.9;">Вся линейка продукции, технические характеристики, таблицы размеров</p>
+                </div>
+                <a href="#" class="btn" style="background: white; color: var(--primary-color);">
+                    <i class="fas fa-download"></i> Скачать PDF (12 МБ)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents by Category -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Чертежи продукции</h2>
+                <p>Чертежи в форматах PDF и DWG для всех типов соединительных элементов</p>
+            </div>
+
+            <div class="accordion">
+                <!-- Corner Connectors -->
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <span><i class="fas fa-cube" style="margin-right: 10px; color: var(--primary-color);"></i> Угловые соединители</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Угловой соединитель R50 (внутренний угол)</div>
+                                    <div class="document-meta">PDF • 245 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-drafting-compass"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Угловой соединитель R50 (внутренний угол)</div>
+                                    <div class="document-meta">DWG • 180 КБ • AutoCAD 2024</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Угловой соединитель R50 (внешний угол)</div>
+                                    <div class="document-meta">PDF • 230 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Угловой соединитель R70 (внутренний угол)</div>
+                                    <div class="document-meta">PDF • 260 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Угловой соединитель R70 (внешний угол)</div>
+                                    <div class="document-meta">PDF • 255 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wall-Floor -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><i class="fas fa-layer-group" style="margin-right: 10px; color: var(--primary-color);"></i> Соединители стена-пол</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Соединитель стена-пол R50</div>
+                                    <div class="document-meta">PDF • 310 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-drafting-compass"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Соединитель стена-пол R50</div>
+                                    <div class="document-meta">DWG • 215 КБ • AutoCAD 2024</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Соединитель стена-пол R70</div>
+                                    <div class="document-meta">PDF • 325 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wall-Ceiling -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><i class="fas fa-layer-group" style="margin-right: 10px; color: var(--primary-color);"></i> Соединители стена-потолок</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Соединитель стена-потолок R50</div>
+                                    <div class="document-meta">PDF • 295 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Соединитель стена-потолок R70</div>
+                                    <div class="document-meta">PDF • 305 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caps -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><i class="fas fa-stop" style="margin-right: 10px; color: var(--primary-color);"></i> Заглушки торцевые</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Заглушка торцевая R50</div>
+                                    <div class="document-meta">PDF • 145 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="document-info">
+                                    <div class="document-name">Заглушка торцевая R70</div>
+                                    <div class="document-meta">PDF • 155 КБ • Обновлено: 15.01.2026</div>
+                                </div>
+                                <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Models -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>3D-модели</h2>
+                <p>Модели в форматах STEP и IGES для интеграции в ваши проекты</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Угловые соединители R50</h3>
+                    <p>Комплект 3D-моделей внутренних и внешних углов R50</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> STEP</a>
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> IGES</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Угловые соединители R70</h3>
+                    <p>Комплект 3D-моделей внутренних и внешних углов R70</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> STEP</a>
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> IGES</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Соединители стена-пол</h3>
+                    <p>3D-модели соединителей стена-пол R50 и R70</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> STEP</a>
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> IGES</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Соединители стена-потолок</h3>
+                    <p>3D-модели соединителей стена-потолок R50 и R70</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> STEP</a>
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> IGES</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-stop"></i>
+                    </div>
+                    <h3>Заглушки торцевые</h3>
+                    <p>3D-модели заглушек для профилей R50 и R70</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> STEP</a>
+                        <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> IGES</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <h3>Полный архив 3D</h3>
+                    <p>Все 3D-модели в одном архиве</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Скачать всё (45 МБ)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications & Instructions -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Спецификации и инструкции</h2>
+            </div>
+
+            <div class="documents-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="document-item">
+                    <div class="document-icon"><i class="fas fa-table"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Таблица размеров всех соединительных элементов</div>
+                        <div class="document-meta">PDF • 520 КБ • Сводная таблица размеров и характеристик</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon"><i class="fas fa-list-alt"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Технические характеристики продукции</div>
+                        <div class="document-meta">PDF • 380 КБ • Допуски, материалы, покрытия</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon"><i class="fas fa-book"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Инструкция по монтажу угловых соединителей</div>
+                        <div class="document-meta">PDF • 1.2 МБ • Пошаговое руководство с иллюстрациями</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon"><i class="fas fa-book"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Инструкция по монтажу соединителей стена-пол</div>
+                        <div class="document-meta">PDF • 980 КБ • Пошаговое руководство с иллюстрациями</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon"><i class="fas fa-tools"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Рекомендации по выбору крепежа</div>
+                        <div class="document-meta">PDF • 450 КБ • Типы крепежа и рекомендации по применению</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Сертификаты и разрешительные документы</h2>
+            </div>
+
+            <div class="documents-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="document-item">
+                    <div class="document-icon" style="background: #e8f5e9; color: #28a745;"><i class="fas fa-award"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Сертификат ISO 9001:2015</div>
+                        <div class="document-meta">PDF • 1.5 МБ • Действителен до 12.2027</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon" style="background: #e8f5e9; color: #28a745;"><i class="fas fa-certificate"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Сертификат соответствия ГОСТ Р</div>
+                        <div class="document-meta">PDF • 890 КБ • Действителен до 06.2027</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon" style="background: #e8f5e9; color: #28a745;"><i class="fas fa-clipboard-check"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Протоколы испытаний материалов</div>
+                        <div class="document-meta">PDF • 720 КБ • Лабораторные испытания алюминиевого сплава</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="document-item">
+                    <div class="document-icon" style="background: #e8f5e9; color: #28a745;"><i class="fas fa-shield-alt"></i></div>
+                    <div class="document-info">
+                        <div class="document-name">Санитарно-эпидемиологическое заключение</div>
+                        <div class="document-meta">PDF • 1.1 МБ • Применение в чистых помещениях</div>
+                    </div>
+                    <a href="#" class="document-download"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для чистых помещений с 2009 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79001234567"><i class="fas fa-phone"></i> +7 (900) 123-45-67</a>
+                        <a href="mailto:info@fora-clean.ru"><i class="fas fa-envelope"></i> info@fora-clean.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Производственная, 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог"><i class="fas fa-download"></i></button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат"><i class="fas fa-comments"></i></button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок"><i class="fas fa-phone"></i></button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Всего позиций:</span><span id="cartTotal">0</span></div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled><i class="fas fa-paper-plane"></i> Отправить запрос КП</button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled><i class="fas fa-save"></i> Сохранить спецификацию</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Modals -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="tel" name="phone" placeholder="Телефон" required></div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-phone"></i> Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

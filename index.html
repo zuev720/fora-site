@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО "Фора" | Производство алюминиевых соединительных элементов для скругляющих профилей чистых помещений</title>
+    <meta name="description" content="Производство алюминиевых соединительных элементов для чистых помещений. Угловые соединители R50/R70, заглушки. Полный цикл от отливки до порошковой окраски.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">ФОРА</span>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="catalog.html">Каталог продукции</a></li>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-cart" id="cartBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Запрос КП</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="tel:+79092974144" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (909) 297-41-44</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">ФОРА</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="production.html">Производство</a></li>
+                <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                <li><a href="documentation.html">Документация</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+79001234567" class="mobile-phone">
+            <i class="fas fa-phone"></i> +7 (900) 123-45-67
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Производство алюминиевых соединительных элементов для чистых помещений</h1>
+                    <p class="hero-subtitle">Полный цикл от отливки до порошковой окраски. Угловые соединители, заглушки R50/R70 и индивидуальные решения для фармацевтики, медицины, пищевой промышленности.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" id="downloadCatalogBtn">
+                            <i class="fas fa-download"></i> Скачать каталог PDF
+                        </a>
+                        <a href="contacts.html" class="btn btn-outline">
+                            <i class="fas fa-comments"></i> Получить консультацию
+                        </a>
+                        <a href="calculator.html" class="btn btn-outline">
+                            <i class="fas fa-calculator"></i> Рассчитать заказ
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="hero-visual">
+                    <div class="product-showcase">
+                        <div class="showcase-item active" data-product="corner">
+                            <i class="fas fa-cube showcase-icon"></i>
+                            <span>Угловой соединитель R50</span>
+                        </div>
+                        <div class="showcase-item" data-product="wall-floor">
+                            <i class="fas fa-layer-group showcase-icon"></i>
+                            <span>Соединитель стена-пол</span>
+                        </div>
+                        <div class="showcase-item" data-product="cap">
+                            <i class="fas fa-stop showcase-icon"></i>
+                            <span>Заглушка торцевая</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="hero-bg-decoration"></div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Наши преимущества</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Собственное производство</h3>
+                    <p>Полный цикл от отливки до упаковки на собственных мощностях</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Точность ЧПУ</h3>
+                    <p>Токарная и фрезерная обработка на современных станках с ЧПУ</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Любые цвета RAL</h3>
+                    <p>Порошковая окраска в заводских условиях по каталогу RAL</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Индивидуальные размеры</h3>
+                    <p>Работа по чертежам заказчика, нестандартные радиусы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Популярные категории продукции</h2>
+            <div class="categories-grid">
+                <a href="catalog.html?category=corner-r50" class="category-card">
+                    <div class="category-icon category-icon-img">
+                        <img src="images/Create_a_professional_product_photography_composit-1769874922647.png"
+                        alt="Угловые соединители для скругляющего профиля R50/R70 для внутренних углов"
+                        >
+                    </div>
+                    <div class="category-info">
+                        <h3>Соединители для внутренних углов</h3>
+                        <p>Угловые соединители для скругляющего профиля R50/R70</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Для R50 / R70</li>
+                            <li><i class="fas fa-check"></i> Алюминий АД31</li>
+                            <li><i class="fas fa-check"></i> Порошковая окраска</li>
+                        </ul>
+                        <span class="category-link">Перейти в каталог <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="catalog.html?category=caps" class="category-card">
+                    <div class="category-icon category-icon-img">
+                        <img src="images/plug50.png" alt="Торцевые заглушки для профилей R50 и R70">
+                    </div>
+                    <div class="category-info">
+                        <h3>Заглушки торцевые</h3>
+                        <p>Торцевые заглушки для профилей R50 и R70</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Для R50 / R70</li>
+                            <li><i class="fas fa-check"></i> Алюминий АД31</li>
+                            <li><i class="fas fa-check"></i> Порошковая окраска</li>
+                        </ul>
+                        <span class="category-link">Перейти в каталог <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="catalog.html?category=wall-floor" class="category-card">
+                    <div class="category-icon category-icon-img">
+                        <img src="images/outer-corner70.png" alt="Угловые соединители для скругляющего профиля R50/R70 для внешних углов">
+                    </div>
+                    <div class="category-info">
+                        <h3>Соединители для внешних углов</h3>
+                        <p>Угловые соединители для скругляющего профиля R50/R70</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> R50 / R70</li>
+                            <li><i class="fas fa-check"></i> Алюминий АД31</li>
+                            <li><i class="fas fa-check"></i> Порошковая окраска</li>
+                        </ul>
+                        <span class="category-link">Перейти в каталог <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="catalog.html?category=corner-r70" class="category-card">
+                    <div class="category-icon category-icon-img">
+                        <img src="images/internal-angle70.png" alt="Угловой соединитель внутренний R70">
+                    </div>
+                    <div class="category-info">
+                        <h3>Соединители для скругляющего профиля для заведения линолеума</h3>
+                        <p>Для профилей R50/R70</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> R50 / R70</li>
+                            <li><i class="fas fa-check"></i> Алюминий АД31</li>
+                            <li><i class="fas fa-check"></i> Порошковая окраска</li>
+                        </ul>
+                        <span class="category-link">Перейти в каталог <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Process -->
+    <section class="production-process">
+        <div class="container">
+            <h2 class="section-title">Производственный цикл</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Отливка</h4>
+                    <p>Литье алюминиевых заготовок</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h4>Токарная обработка</h4>
+                    <p>Обработка на станках ЧПУ</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-cog"></i></div>
+                    <h4>Фрезеровка</h4>
+                    <p>Создание радиусных форм</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-cut"></i></div>
+                    <h4>Нарезка</h4>
+                    <p>Подгонка размеров</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon"><i class="fas fa-spray-can"></i></div>
+                    <h4>Окраска</h4>
+                    <p>Порошковое покрытие</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                    <h4>Контроль</h4>
+                    <p>Проверка качества</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">7</div>
+                    <div class="step-icon"><i class="fas fa-box"></i></div>
+                    <h4>Упаковка</h4>
+                    <p>Готово к отгрузке</p>
+                </div>
+            </div>
+            <div class="process-cta">
+                <a href="production.html" class="btn btn-primary">
+                    <i class="fas fa-industry"></i> Подробнее о производстве
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="industries">
+        <div class="container">
+            <h2 class="section-title">Для кого мы производим</h2>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Фармацевтика</h3>
+                    <p>Чистые помещения для производства лекарственных препаратов, соответствие стандартам GMP</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Медицина</h3>
+                    <p>Операционные блоки, процедурные кабинеты, стерильные зоны медицинских учреждений</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Микроэлектроника</h3>
+                    <p>Производственные помещения для выпуска электронных компонентов и микросхем</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Пищевая промышленность</h3>
+                    <p>Цеха для производства продуктов питания с повышенными требованиями к гигиене</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="7">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">лет на рынке</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">реализованных проектов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">собственное производство</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-suffix"> неделя</div>
+                    <div class="stat-label">типовой срок изготовления</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Preview -->
+    <section class="documentation-preview">
+        <div class="container">
+            <div class="doc-content">
+                <div class="doc-text">
+                    <h2>Техническая документация доступна</h2>
+                    <ul class="doc-list">
+                        <li><i class="fas fa-file-pdf"></i> Чертежи в PDF и DWG</li>
+                        <li><i class="fas fa-cube"></i> 3D-модели в STEP</li>
+                        <li><i class="fas fa-list-alt"></i> Спецификации и ТХ</li>
+                        <li><i class="fas fa-book"></i> Монтажные инструкции</li>
+                        <li><i class="fas fa-certificate"></i> Сертификаты соответствия</li>
+                    </ul>
+                    <a href="documentation.html" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Скачать технические файлы
+                    </a>
+                </div>
+                <div class="doc-visual">
+                    <div class="doc-preview-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Каталог 2026</span>
+                    </div>
+                    <div class="doc-preview-card">
+                        <i class="fas fa-drafting-compass"></i>
+                        <span>Чертежи DWG</span>
+                    </div>
+                    <div class="doc-preview-card">
+                        <i class="fas fa-cube"></i>
+                        <span>3D модели</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Request Form -->
+    <section class="quick-request">
+        <div class="container">
+            <div class="request-content">
+                <div class="request-text">
+                    <h2>Быстрый запрос коммерческого предложения</h2>
+                    <p>Заполните форму и получите КП в течение 2 часов</p>
+                </div>
+                <form class="request-form" id="quickRequestForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Компания">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="interest" required>
+                                <option value="">Что вас интересует?</option>
+                                <option value="corner-r50">Угловые соединители R50</option>
+                                <option value="corner-r70">Угловые соединители R70</option>
+                                <option value="wall-floor">Соединители стена-пол</option>
+                                <option value="wall-ceiling">Соединители стена-потолок</option>
+                                <option value="caps">Заглушки торцевые</option>
+                                <option value="custom">Индивидуальный заказ</option>
+                                <option value="consultation">Консультация</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Получить КП в течение 2 часов
+                    </button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                        <span class="logo-text">ФОРА</span>
+                    </div>
+                    <p>Производство алюминиевых соединительных элементов для скругляющих профилей с 2019 года</p>
+                    <div class="footer-contacts">
+                        <a href="tel:+79092974144"><i class="fas fa-phone"></i> +7 (909) 297-41-44</a>
+                        <a href="mailto:zuev621@mail.ru"><i class="fas fa-envelope"></i> zuev621@mail.ru</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=corner">Угловые соединители</a></li>
+                        <li><a href="catalog.html?category=wall-floor">Соединители стена-пол</a></li>
+                        <li><a href="catalog.html?category=wall-ceiling">Соединители стена-потолок</a></li>
+                        <li><a href="catalog.html?category=caps">Заглушки торцевые</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="production.html">Производство</a></li>
+                        <li><a href="custom-orders.html">Индивидуальные заказы</a></li>
+                        <li><a href="documentation.html">Техническая документация</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="contacts.html">Отдел продаж</a></li>
+                        <li><a href="contacts.html">Технический отдел</a></li>
+                        <li><a href="contacts.html">Реквизиты компании</a></li>
+                    </ul>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>606100, Нижегородская обл., г. Павлово, ул. Коммунистическая, 10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ООО "Фора". Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Panel -->
+    <div class="sticky-panel">
+        <button class="sticky-btn" id="stickyDownload" title="Скачать каталог">
+            <i class="fas fa-download"></i>
+        </button>
+        <button class="sticky-btn" id="stickyCart" title="Запрос КП">
+            <i class="fas fa-file-invoice"></i>
+            <span class="sticky-count" id="stickyCartCount">0</span>
+        </button>
+        <button class="sticky-btn" id="stickyChat" title="Онлайн-чат">
+            <i class="fas fa-comments"></i>
+        </button>
+        <button class="sticky-btn" id="stickyCall" title="Заказать звонок">
+            <i class="fas fa-phone"></i>
+        </button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-file-invoice"></i> Ваш запрос КП</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-inbox"></i>
+                <p>Добавьте товары в запрос</p>
+                <a href="catalog.html" class="btn btn-outline btn-sm">Перейти в каталог</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Всего позиций:</span>
+                <span id="cartTotal">0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="sendRequestBtn" disabled>
+                <i class="fas fa-paper-plane"></i> Отправить запрос КП
+            </button>
+            <button class="btn btn-outline btn-block" id="saveSpecBtn" disabled>
+                <i class="fas fa-save"></i> Сохранить спецификацию
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Callback Modal -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3>Заказать обратный звонок</h3>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                </div>
+                <div class="form-group">
+                    <select name="time">
+                        <option value="">Удобное время для звонка</option>
+                        <option value="asap">Как можно скорее</option>
+                        <option value="morning">Утром (9:00-12:00)</option>
+                        <option value="day">Днём (12:00-17:00)</option>
+                        <option value="evening">Вечером (17:00-19:00)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-phone"></i> Перезвоните мне
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content modal-success">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Спасибо за заявку!</h3>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+            <button class="btn btn-primary" id="successClose">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
