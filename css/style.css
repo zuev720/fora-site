@@ -1869,9 +1869,12 @@ h4 {
 }
 
 .product-actions .btn {
-    flex: 1;
     padding: 10px;
     font-size: 0.9rem;
+}
+
+.product-actions .fa-plus {
+    margin-top: 4px;
 }
 
 /* Product Detail Page */
