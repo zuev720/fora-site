@@ -1779,6 +1779,9 @@ h4 {
 
 /* Product Card */
 .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--border-radius-lg);
@@ -1827,6 +1830,9 @@ h4 {
 }
 
 .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
 }
 
