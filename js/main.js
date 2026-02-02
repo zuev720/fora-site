@@ -605,12 +605,60 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Catalog filters
     const filterOptions = document.querySelectorAll('.filter-option input');
-    filterOptions.forEach(option => {
-        option.addEventListener('change', () => {
-            // In production, this would filter products
-            console.log('Filter changed:', option.value, option.checked);
+    const productCards = document.querySelectorAll('.product-card');
+    const productsCount = document.querySelector('.products-count strong');
+    
+    function applyFilters() {
+        // Get selected type filters
+        const selectedTypes = [];
+        document.querySelectorAll('.filter-option input[id^="type-"]:checked').forEach(input => {
+            selectedTypes.push(input.value);
         });
+        
+        // Get selected radius filters
+        const selectedRadii = [];
+        document.querySelectorAll('.filter-option input[id^="radius-"]:checked').forEach(input => {
+            selectedRadii.push(input.value);
+        });
+        
+        let visibleCount = 0;
+        
+        productCards.forEach(card => {
+            const cardType = card.dataset.type;
+            const cardRadius = card.dataset.radius;
+            
+            // Check if card matches filters
+            const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(cardType);
+            const radiusMatch = selectedRadii.length === 0 || selectedRadii.includes(cardRadius);
+            
+            if (typeMatch && radiusMatch) {
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Update products count
+        if (productsCount) {
+            productsCount.textContent = visibleCount;
+        }
+    }
+    
+    filterOptions.forEach(option => {
+        option.addEventListener('change', applyFilters);
     });
+    
+    // Reset filters button
+    const resetFiltersBtn = document.getElementById('resetFilters');
+    if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', () => {
+            filterOptions.forEach(option => {
+                option.checked = false;
+            });
+            applyFilters();
+        });
+    }
     
     // Product sorting
     const sortSelect = document.querySelector('.products-sort select');
