@@ -90,25 +90,17 @@
                 <aside class="filters-sidebar">
                     <div class="filter-group">
                         <div class="filter-header">
-                            <span>Тип соединения</span>
+                            <span>Тип элемента</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="filter-options">
                             <div class="filter-option">
                                 <input type="checkbox" id="type-inner" value="inner-corner">
-                                <label for="type-inner">Стена-стена (внутренний угол)</label>
+                                <label for="type-inner">Внутренний угол</label>
                             </div>
                             <div class="filter-option">
                                 <input type="checkbox" id="type-outer" value="outer-corner">
-                                <label for="type-outer">Стена-стена (внешний угол)</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="type-wall-floor" value="wall-floor">
-                                <label for="type-wall-floor">Стена-пол</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="type-wall-ceiling" value="wall-ceiling">
-                                <label for="type-wall-ceiling">Стена-потолок</label>
+                                <label for="type-outer">Внешний угол</label>
                             </div>
                             <div class="filter-option">
                                 <input type="checkbox" id="type-caps" value="caps">
@@ -124,62 +116,24 @@
                         </div>
                         <div class="filter-options">
                             <div class="filter-option">
+                                <input type="checkbox" id="radius-40" value="r40">
+                                <label for="radius-40">R40</label>
+                            </div>
+                            <div class="filter-option">
                                 <input type="checkbox" id="radius-50" value="r50">
                                 <label for="radius-50">R50</label>
                             </div>
                             <div class="filter-option">
+                                <input type="checkbox" id="radius-55" value="r55">
+                                <label for="radius-55">R55</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="radius-65" value="r65">
+                                <label for="radius-65">R65</label>
+                            </div>
+                            <div class="filter-option">
                                 <input type="checkbox" id="radius-70" value="r70">
                                 <label for="radius-70">R70</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="radius-custom" value="custom">
-                                <label for="radius-custom">Другие радиусы (под заказ)</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-group">
-                        <div class="filter-header">
-                            <span>Количество креплений</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-options">
-                            <div class="filter-option">
-                                <input type="checkbox" id="mount-1" value="1">
-                                <label for="mount-1">1 монтажная пластина</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="mount-2" value="2">
-                                <label for="mount-2">2 монтажные пластины</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="mount-3" value="3">
-                                <label for="mount-3">3 монтажные пластины</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-group">
-                        <div class="filter-header">
-                            <span>Цвет покрытия</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-options">
-                            <div class="filter-option">
-                                <input type="checkbox" id="color-white" value="ral9003">
-                                <label for="color-white">RAL 9003 (белый)</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="color-gray" value="ral7035">
-                                <label for="color-gray">RAL 7035 (светло-серый)</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="color-silver" value="ral9006">
-                                <label for="color-silver">RAL 9006 (серебристый)</label>
-                            </div>
-                            <div class="filter-option">
-                                <input type="checkbox" id="color-custom" value="custom">
-                                <label for="color-custom">Другие цвета (под заказ)</label>
                             </div>
                         </div>
                     </div>
@@ -208,7 +162,7 @@
 
                     <div class="products-grid">
                         <!-- Product Card 1 -->
-                        <div class="product-card" data-product-id="corner-r50-inner-1">
+                        <div class="product-card" data-product-id="corner-r50">
                             <div class="product-image">
                                 <img src="images/internal-angle50.png" alt="Угловой соединитель внутренний угол R50">
                                 <span class="product-badge">Хит продаж</span>
@@ -220,8 +174,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R50</span>
-                                    <span>52×52 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -235,7 +187,7 @@
                         </div>
 
                         <!-- Product Card 2 -->
-                        <div class="product-card" data-product-id="corner-r50-outer-1">
+                        <div class="product-card" data-product-id="corner-r50">
                             <div class="product-image">
                                 <img src="images/outer-corner70.png" alt="Угловой соединитель внешний угол R50">
                             </div>
@@ -246,8 +198,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R50</span>
-                                    <span>52×52 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -261,7 +211,7 @@
                         </div>
 
                          <!-- Product Card 3 -->
-                        <div class="product-card" data-product-id="cap-r50-1">
+                        <div class="product-card" data-product-id="cap-r50">
                             <div class="product-image">
                                 <img src="images/plug50.png" alt="Заглушка торцевая R50">
                             </div>
@@ -272,7 +222,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R50</span>
-                                    <span>52×52 мм</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -286,7 +235,7 @@
                         </div>
 
                         <!-- Product Card 4 -->
-                        <div class="product-card" data-product-id="corner-r70-inner-1">
+                        <div class="product-card" data-product-id="corner-r70">
                             <div class="product-image">
                                 <img src="images/internal-angle70.png" alt="Угловой соединитель внутренний угол R70">
                                 <span class="product-badge">Новинка</span>
@@ -298,8 +247,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R70</span>
-                                    <span>72×72 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -313,7 +260,7 @@
                         </div>
                         
                         <!-- Product Card 5 -->
-                        <div class="product-card" data-product-id="corner-r70-outer-1">
+                        <div class="product-card" data-product-id="corner-r70">
                             <div class="product-image">
                                 <img src="images/Remove_all_metal_mounting_brackets_and_plates_from-1769858407435.png" alt="Угловой соединитель R70 (внешний угол)">
                             </div>
@@ -324,8 +271,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R70</span>
-                                    <span>72×72 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -339,7 +284,7 @@
                         </div>
 
                         <!-- Product Card 6 -->
-                        <div class="product-card" data-product-id="cap-r70-1">
+                        <div class="product-card" data-product-id="cap-r70">
                             <div class="product-image">
                                 <img src="images/plug50.png" alt="Заглушка торцевая R70">
                             </div>
@@ -350,7 +295,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R70</span>
-                                    <span>72×72 мм</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -363,7 +307,7 @@
                             </div>
                         </div>
                         <!-- Product Card 7 -->
-                        <div class="product-card" data-product-id="wall-floor-r50-1">
+                        <div class="product-card" data-product-id="wall-floor-r50">
                             <div class="product-image">
                                 <img src="images/internal-angle50.png" alt="Угловой соединитель R50 (внутренний угол) под ленолеум">
                                 <span class="product-badge">Хит продаж</span>
@@ -375,8 +319,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R50</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -390,7 +332,7 @@
                         </div>
 
                         <!-- Product Card 8 -->
-                        <div class="product-card" data-product-id="wall-floor-r70-1">
+                        <div class="product-card" data-product-id="wall-floor-r50">
                             <div class="product-image">
                                 <img src="images/outer-corner70.png" alt="Угловой соединитель R50 (внешний угол) под ленолеум">
                             </div>
@@ -400,9 +342,7 @@
                                     <a href="product-detail.html">Угловой соединитель R50 (внешний угол) под ленолеум</a>
                                 </h3>
                                 <div class="product-specs">
-                                    <span>R70</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
+                                    <span>R50</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -416,7 +356,7 @@
                         </div>
 
                         <!-- Product Card 9 -->
-                        <div class="product-card" data-product-id="wall-ceiling-r50-1">
+                        <div class="product-card" data-product-id="wall-ceiling-r50">
                             <div class="product-image">
                                 <img src="images/plug50.png" alt="Заглушка торцевая R50 под ленолеум">
                             </div>
@@ -427,8 +367,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R50</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -442,7 +380,7 @@
                         </div>
 
                         <!-- Product Card 10 -->
-                        <div class="product-card" data-product-id="wall-floor-r50-1">
+                        <div class="product-card" data-product-id="wall-floor-r70">
                             <div class="product-image">
                                 <img src="images/internal-angle50.png" alt="Угловой соединитель R70 (внутренний угол) под ленолеум">
                                 <span class="product-badge">Хит продаж</span>
@@ -453,9 +391,7 @@
                                     <a href="product-detail.html">Угловой соединитель R70 (внутренний угол) под ленолеум</a>
                                 </h3>
                                 <div class="product-specs">
-                                    <span>R50</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
+                                    <span>R70</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -469,7 +405,7 @@
                         </div>
 
                         <!-- Product Card 11 -->
-                        <div class="product-card" data-product-id="wall-floor-r70-1">
+                        <div class="product-card" data-product-id="wall-floor-r70">
                             <div class="product-image">
                                 <img src="images/outer-corner70.png" alt="Угловой соединитель R70 (внешний угол) под ленолеум">
                             </div>
@@ -480,8 +416,6 @@
                                 </h3>
                                 <div class="product-specs">
                                     <span>R70</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -495,7 +429,7 @@
                         </div>
 
                         <!-- Product Card 12 -->
-                        <div class="product-card" data-product-id="wall-ceiling-r50-1">
+                        <div class="product-card" data-product-id="wall-ceiling-r70">
                             <div class="product-image">
                                 <img src="images/plug50.png" alt="Заглушка торцевая R70 под ленолеум">
                             </div>
@@ -505,35 +439,7 @@
                                     <a href="product-detail.html">Заглушка торцевая R70 под ленолеум</a>
                                 </h3>
                                 <div class="product-specs">
-                                    <span>R50</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
-                                </div>
-                                <div class="product-actions">
-                                    <button class="btn btn-primary btn-sm add-to-cart">
-                                        <i class="fas fa-plus"></i> В запрос КП
-                                    </button>
-                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
-                                        Подробнее
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product Card 8 -->
-                        <div class="product-card" data-product-id="wall-ceiling-r70-1">
-                            <div class="product-image">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <div class="product-info">
-                                <div class="product-category">Соединители стена-потолок</div>
-                                <h3 class="product-name">
-                                    <a href="product-detail.html">Соединитель стена-потолок R70</a>
-                                </h3>
-                                <div class="product-specs">
                                     <span>R70</span>
-                                    <span>L=500 мм</span>
-                                    <span>2 крепления</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -546,22 +452,162 @@
                             </div>
                         </div>
 
-
-
-                        <!-- Product Card 11 -->
-                        <div class="product-card" data-product-id="corner-r50-3mount">
+                        <!-- Product Card 13 -->
+                        <div class="product-card" data-product-id="wall-ceiling-r40">
                             <div class="product-image">
-                                <i class="fas fa-cube"></i>
+                                <img src="images/internal-angle50.png" alt="Угловой соединитель внутренний угол R40">
                             </div>
                             <div class="product-info">
                                 <div class="product-category">Угловые соединители</div>
                                 <h3 class="product-name">
-                                    <a href="product-detail.html">Угловой соединитель R50 (3 крепления)</a>
+                                    <a href="product-detail.html">Угловой соединитель R40 (внутренний угол)</a>
                                 </h3>
                                 <div class="product-specs">
-                                    <span>R50</span>
-                                    <span>52×52×52 мм</span>
-                                    <span>3 крепления</span>
+                                    <span>R40</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 14 -->
+                        <div class="product-card" data-product-id="wall-ceiling-r40">
+                            <div class="product-image">
+                                <img src="images/outer-corner70.png" alt="Угловой соединитель внешний угол R40">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R40 (внешний угол)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R40</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 15 -->
+                        <div class="product-card" data-product-id="cap-r40">
+                            <div class="product-image">
+                                <img src="images/plug50.png" alt="Заглушка торцевая R40">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая R40</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R40</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 16 -->
+                        <div class="product-card" data-product-id="wall-ceiling-r55">
+                            <div class="product-image">
+                                <img src="images/internal-angle50.png" alt="Угловой соединитель внутренний угол R55">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R55 (внутренний угол)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R55</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 17 -->
+                        <div class="product-card" data-product-id="wall-ceiling-r55">
+                            <div class="product-image">
+                                <img src="images/outer-corner70.png" alt="Угловой соединитель внешний угол R55">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R55 (внешний угол)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R55</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 18 -->
+                        <div class="product-card" data-product-id="cap-r55">
+                            <div class="product-image">
+                                <img src="images/plug50.png" alt="Заглушка торцевая R55">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая R55</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R55</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 19 -->
+                        <div class="product-card" data-product-id="corner-r65-outer-1">
+                            <div class="product-image">
+                                <img src="images/outer-corner70.png" alt="Угловой соединитель внешний угол R65">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Угловые соединители</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Угловой соединитель R65 (внешний угол)</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R65</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
@@ -574,20 +620,90 @@
                             </div>
                         </div>
 
-                        <!-- Product Card 12 -->
-                        <div class="product-card" data-product-id="corner-r70-3mount">
+                        <!-- Product Card 20 -->
+                        <div class="product-card" data-product-id="cap-r50">
                             <div class="product-image">
-                                <i class="fas fa-cube"></i>
+                                <img src="images/plug50.png" alt="Заглушка торцевая тупоконечная R50">
                             </div>
                             <div class="product-info">
-                                <div class="product-category">Угловые соединители</div>
+                                <div class="product-category">Заглушки торцевые тупоконечные</div>
                                 <h3 class="product-name">
-                                    <a href="product-detail.html">Угловой соединитель R70 (3 крепления)</a>
+                                    <a href="product-detail.html">Заглушка торцевая тупоконечная R50</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 21 -->
+                        <div class="product-card" data-product-id="cap-r70">
+                            <div class="product-image">
+                                <img src="images/plug50.png" alt="Заглушка торцевая тупоконечная R70">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые тупоконечные</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая тупоконечная R70</a>
                                 </h3>
                                 <div class="product-specs">
                                     <span>R70</span>
-                                    <span>72×72×72 мм</span>
-                                    <span>3 крепления</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 22 -->
+                        <div class="product-card" data-product-id="cap-r40-1">
+                            <div class="product-image">
+                                <img src="images/plug50.png" alt="Заглушка торцевая плоская R40">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые плоские</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая плоская R40</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R40</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-sm add-to-cart">
+                                        <i class="fas fa-plus"></i> В запрос КП
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 23 -->
+                        <div class="product-card" data-product-id="cap-r50-1">
+                            <div class="product-image">
+                                <img src="images/plug50.png" alt="Заглушка торцевая плоская R50">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Заглушки торцевые плоские</div>
+                                <h3 class="product-name">
+                                    <a href="product-detail.html">Заглушка торцевая плоская R50</a>
+                                </h3>
+                                <div class="product-specs">
+                                    <span>R50</span>
                                 </div>
                                 <div class="product-actions">
                                     <button class="btn btn-primary btn-sm add-to-cart">
