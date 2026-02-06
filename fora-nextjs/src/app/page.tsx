@@ -28,10 +28,11 @@ import {
   faCertificate,
   faArrowRight,
   faCheck,
+  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Производство алюминиевых соединительных элементов для чистых помещений',
+  title: 'ООО "Фора" | Производство алюминиевых соединительных элементов для скругляющих профилей чистых помещений',
   description: 'Производство алюминиевых соединительных элементов для чистых помещений. Угловые соединители R50/R70, заглушки. Полный цикл от отливки до порошковой окраски.',
   alternates: {
     canonical: '/',
@@ -40,11 +41,12 @@ export const metadata: Metadata = {
 
 const categories = [
   {
-    href: '/catalog?category=corner-inner',
+    href: '/catalog?category=corner-r50',
     image: '/Create_a_professional_product_photography_composit-1769874922647.png',
     alt: 'Угловые соединители для скругляющего профиля R50/R70 для внутренних углов',
     title: 'Соединители для внутренних углов',
     description: 'Угловые соединители для скругляющего профиля R50/R70',
+    features: ['Для R50 / R70', 'Алюминий АД31', 'Порошковая окраска'],
   },
   {
     href: '/catalog?category=caps',
@@ -52,20 +54,23 @@ const categories = [
     alt: 'Торцевые заглушки для профилей R50 и R70',
     title: 'Заглушки торцевые',
     description: 'Торцевые заглушки для профилей R50 и R70',
+    features: ['Для R50 / R70', 'Алюминий АД31', 'Порошковая окраска'],
   },
   {
-    href: '/catalog?category=corner-outer',
+    href: '/catalog?category=wall-floor',
     image: '/outer-corner70.png',
     alt: 'Угловые соединители для скругляющего профиля R50/R70 для внешних углов',
     title: 'Соединители для внешних углов',
     description: 'Угловые соединители для скругляющего профиля R50/R70',
+    features: ['R50 / R70', 'Алюминий АД31', 'Порошковая окраска'],
   },
   {
-    href: '/catalog?category=linoleum',
+    href: '/catalog?category=corner-r70',
     image: '/internal-angle70.png',
     alt: 'Угловой соединитель внутренний R70',
-    title: 'Соединители с заведением линолеума',
+    title: 'Соединители для скругляющего профиля с заведением линолеума',
     description: 'Для профилей R50/R70',
+    features: ['R50 / R70', 'Алюминий АД31', 'Порошковая окраска'],
   },
 ];
 
@@ -163,7 +168,7 @@ export default function HomePage() {
       </section>
 
       {/* Advantages Section */}
-      <section className="advantages-section">
+      <section className="advantages">
         <div className="container">
           <h2 className="section-title">Наши преимущества</h2>
           <div className="advantages-grid">
@@ -181,18 +186,18 @@ export default function HomePage() {
       </section>
 
       {/* Product Categories */}
-      <section className="categories-section">
+      <section className="categories">
         <div className="container">
           <h2 className="section-title">Популярные категории продукции</h2>
           <div className="categories-grid">
             {categories.map((cat, index) => (
               <Link key={index} href={cat.href} className="category-card">
-                <div className="category-icon">
+                <div className="category-icon category-icon-img">
                   <Image
                     src={cat.image}
                     alt={cat.alt}
-                    width={100}
-                    height={100}
+                    width={200}
+                    height={220}
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
@@ -200,9 +205,9 @@ export default function HomePage() {
                   <h3>{cat.title}</h3>
                   <p>{cat.description}</p>
                   <ul className="category-features">
-                    <li><FontAwesomeIcon icon={faCheck} /> Для R50 / R70</li>
-                    <li><FontAwesomeIcon icon={faCheck} /> Алюминий АД31</li>
-                    <li><FontAwesomeIcon icon={faCheck} /> Порошковая окраска</li>
+                    {cat.features.map((feature, idx) => (
+                      <li key={idx}><FontAwesomeIcon icon={faCheck} /> {feature}</li>
+                    ))}
                   </ul>
                   <span className="category-link">
                     Перейти в каталог <FontAwesomeIcon icon={faArrowRight} />
@@ -239,7 +244,7 @@ export default function HomePage() {
       </section>
 
       {/* Industries */}
-      <section className="industries-section">
+      <section className="industries">
         <div className="container">
           <h2 className="section-title">Для кого мы производим</h2>
           <div className="industries-grid">
@@ -257,7 +262,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="stats-section">
+      <section className="stats">
         <div className="container">
           <div className="stats-grid">
             {stats.map((stat, index) => (
@@ -306,19 +311,46 @@ export default function HomePage() {
       </section>
 
       {/* Quick Request */}
-      <section className="cta-section">
+      <section className="quick-request">
         <div className="container">
-          <div className="cta-content">
-            <h2>Быстрый запрос коммерческого предложения</h2>
-            <p>Заполните форму и получите КП в течение 2 часов</p>
-            <div className="cta-buttons">
-              <Link href="/contacts" className="btn btn-primary">
-                Оставить заявку
-              </Link>
-              <Link href="/catalog" className="btn btn-outline">
-                Перейти в каталог
-              </Link>
+          <div className="request-content">
+            <div className="request-text">
+              <h2>Быстрый запрос коммерческого предложения</h2>
+              <p>Заполните форму и получите КП в течение 2 часов</p>
             </div>
+            <form className="request-form" id="quickRequestForm">
+              <div className="form-row">
+                <div className="form-group">
+                  <input type="text" name="name" placeholder="Ваше имя" required />
+                </div>
+                <div className="form-group">
+                  <input type="text" name="company" placeholder="Компания" />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div className="form-group">
+                  <select name="interest" required>
+                    <option value="">Что вас интересует?</option>
+                    <option value="corner-r50">Угловые соединители R50</option>
+                    <option value="corner-r70">Угловые соединители R70</option>
+                    <option value="wall-floor">Соединители стена-пол</option>
+                    <option value="wall-ceiling">Соединители стена-потолок</option>
+                    <option value="caps">Заглушки торцевые</option>
+                    <option value="custom">Индивидуальный заказ</option>
+                    <option value="consultation">Консультация</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary btn-block">
+                <FontAwesomeIcon icon={faPaperPlane} /> Получить КП в течение 2 часов
+              </button>
+              <p className="form-note">
+                Нажимая кнопку, вы соглашаетесь с <Link href="/privacy">политикой конфиденциальности</Link>
+              </p>
+            </form>
           </div>
         </div>
       </section>
