@@ -182,44 +182,53 @@ h4 { font-size: 1.25rem; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 12px 0;
+    gap: 15px;
+    flex-wrap: nowrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
+    gap: 8px;
     font-weight: 800;
+    font-size: 1.35rem;
     color: var(--primary-color);
-    text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
+    font-size: 0.9rem;
 }
 
-.logo-text {
-    letter-spacing: 2px;
+.main-nav {
+    flex: 1;
+    min-width: 0;
 }
 
-.main-nav .nav-list {
+.nav-list {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
 }
 
 .main-nav a {
     color: var(--gray-700);
     font-weight: 500;
+    font-size: 0.875rem;
+    padding: 8px 0;
     position: relative;
-    padding: 5px 0;
+    white-space: nowrap;
 }
 
 .main-nav a:hover,
@@ -246,22 +255,25 @@ h4 { font-size: 1.25rem; }
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .btn-cart {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
+    gap: 6px;
+    padding: 8px 14px;
     background: var(--primary-light);
+    color: var(--primary-color);
     border: none;
     border-radius: var(--border-radius);
-    color: var(--primary-color);
     font-weight: 600;
+    font-size: 0.875rem;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
+    white-space: nowrap;
 }
 
 .btn-cart:hover {
@@ -271,14 +283,14 @@ h4 { font-size: 1.25rem; }
 
 .cart-count {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 20px;
-    height: 20px;
+    top: -8px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
     background: var(--accent-color);
     color: var(--white);
-    font-size: 0.75rem;
     border-radius: 50%;
+    font-size: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,9 +299,11 @@ h4 { font-size: 1.25rem; }
 .header-phone {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     color: var(--gray-700);
     font-weight: 600;
+    font-size: 0.875rem;
+    white-space: nowrap;
 }
 
 .header-phone:hover {
