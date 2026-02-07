@@ -1,7 +1,7 @@
 'use client';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileInvoice, faTimes, faPaperPlane, faSave, faTrash, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faFileInvoice, faTimes, faPaperPlane, faSave, faTrash, faPlus, faMinus, faInbox } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 export interface CartItem {
@@ -75,9 +75,10 @@ export default function CartSidebar({
         <div className="cart-items">
           {items.length === 0 ? (
             <div className="cart-empty">
-              <p>Корзина пуста</p>
+                <FontAwesomeIcon icon={faInbox} />
+                <p>Добавьте товары в запрос</p>
               <p>
-                <Link href="/catalog" onClick={onClose}>
+                <Link className="btn btn-outline btn-sm" href="/catalog" onClick={onClose}>
                   Добавьте товары из каталога
                 </Link>
               </p>
