@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="logo-text">ФОРА</span>
             </div>
             <p>
-              Производство алюминиевых соединительных элементов для скругляющих профилей с 2019 года
+              Производство алюминиевых соединительных элементов для скругляющих профилей в чистых помещениях с 2019 года
             </p>
             <div className="footer-contacts">
               <a href="tel:+79092974144">
@@ -30,9 +30,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Каталог</h4>
             <ul>
-              <li><Link href="/catalog?category=corner">Угловые соединители</Link></li>
-              <li><Link href="/catalog?category=wall-floor">Соединители стена-пол</Link></li>
-              <li><Link href="/catalog?category=wall-ceiling">Соединители стена-потолок</Link></li>
+              <li><Link href="/catalog?category=corner">Соединители внутренние</Link></li>
+              <li><Link href="/catalog?category=wall-floor">Соединители внешние</Link></li>
+              <li><Link href="/catalog?category=wall-ceiling">Соединители под ленолеум</Link></li>
               <li><Link href="/catalog?category=caps">Заглушки торцевые</Link></li>
             </ul>
           </div>
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} ООО "Фора". Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} ООО &quot;Фора&quot;. Все права защищены.</p>
           <div className="footer-links">
             <Link href="#">Политика конфиденциальности</Link>
             <Link href="#">Пользовательское соглашение</Link>
