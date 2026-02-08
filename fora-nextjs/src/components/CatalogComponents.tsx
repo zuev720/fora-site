@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faFilter, faTimes, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faDraftingCompass, faPlus, faFilter, faTimes, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Product, filterOptions } from '@/data/products';
 import { useCart } from '@/components/LayoutWrapper';
 
@@ -161,7 +161,7 @@ export function CatalogFilters({
       <div className="filter-cta">
         <p>Не нашли нужный элемент?</p>
         <Link href="/custom-orders" className="btn btn-outline btn-sm btn-block">
-          Заказать по чертежам
+          <FontAwesomeIcon icon={faDraftingCompass}></FontAwesomeIcon> Заказать по чертежам
         </Link>
       </div>
     </aside>
