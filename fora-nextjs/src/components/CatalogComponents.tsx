@@ -90,17 +90,10 @@ export function CatalogFilters({
     }
   };
 
-  const hasFilters = selectedTypes.length > 0 || selectedRadii.length > 0;
-
   return (
     <aside className="filters-sidebar">
       <div className="filters-header">
         <h3><FontAwesomeIcon icon={faFilter} /> Фильтры</h3>
-        {hasFilters && (
-          <button className="filters-reset" onClick={onReset}>
-            <FontAwesomeIcon icon={faTimes} /> Сбросить
-          </button>
-        )}
       </div>
 
       <div className="filter-group">
@@ -159,6 +152,12 @@ export function CatalogFilters({
         )}
       </div>
 
+      <div className="filter-btn">
+        <button className="btn btn-outline" onClick={onReset}>
+          <FontAwesomeIcon icon={faTimes} />
+          Сбросить фильтры
+        </button>
+      </div>
       <div className="filter-cta">
         <p>Не нашли нужный элемент?</p>
         <Link href="/custom-orders" className="btn btn-outline btn-sm btn-block">

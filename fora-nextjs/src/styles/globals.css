@@ -1303,9 +1303,19 @@ h4 { font-size: 1.25rem; }
 }
 
 .filter-option input:checked + .checkmark::after {
-    content: '\\2713';
+    content: '\2713';
     color: white;
-    font-size: 12px;
+    font-size: 18px;
+}
+
+.filter-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn button {
+    width: 100%;
 }
 
 .filter-cta {
