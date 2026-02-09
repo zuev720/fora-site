@@ -1386,8 +1386,9 @@ h4 {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    color: var(--white);  
+    color: var(--white);
 }
+
 /* Catalog Main */
 .catalog-header {
     display: flex;
@@ -2308,6 +2309,53 @@ h4 {
     .modal-content {
         padding: 25px;
     }
+}
+
+
+/* ===================================
+   CUSTOM ORDER PAGE STYLES
+   =================================== */
+
+.order-process {
+    background: var(--dark-color);
+    padding: 60px 0;
+}
+
+.order-process h2 {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.custom-order-form label {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.custom-order-form input {
+    margin-top: 15px;
+}
+
+.custom-order-form textarea {
+    margin-top: 15px;
+}
+
+.file-upload {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.custom-order-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.custom-order-checkbox input {
+    height: fit-content;
+    width: fit-content;
+    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 /* ===================================

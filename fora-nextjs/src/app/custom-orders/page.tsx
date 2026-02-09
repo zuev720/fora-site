@@ -95,7 +95,7 @@ export default function CustomOrdersPage() {
       </section>
 
       {/* Order Process */}
-      <section className="content-section alt-bg order-process">
+      <section className="alt-bg order-process">
         <div className="container">
           <div className="section-header">
             <h2>Процесс заказа</h2>
@@ -126,7 +126,7 @@ export default function CustomOrdersPage() {
           </div>
 
           <div className="contact-form" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <form id="customOrderForm">
+            <form id="customOrderForm" className="custom-order-form">
               <div className="form-row">
                 <div className="form-group">
                   <label>Ваше имя *</label>
@@ -185,7 +185,7 @@ export default function CustomOrdersPage() {
               <div className="form-group">
                 <label>Дополнительные требования</label>
                 <div className="checkbox-group">
-                  <div className="checkbox-item">
+                  <div className="checkbox-item custom-order-checkbox">
                     <input type="checkbox" id="consultation" name="requirements[]" value="consultation" />
                     <label htmlFor="consultation">Нужна техническая консультация</label>
                   </div>
