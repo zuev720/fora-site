@@ -462,6 +462,16 @@ h4 {
     color: var(--gray-400);
 }
 
+.page-title {
+    font-size: 2.25rem;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    color: var(--gray-600);
+    font-size: 1.1rem;
+}
+
 /* Hero Section */
 .hero {
     padding: 140px 0 80px;
@@ -1645,6 +1655,165 @@ h4 {
     flex-wrap: wrap;
 }
 
+/* ===================================
+   Production Page - Content Section
+   =================================== */
+.content-section {
+    padding: 60px 0;
+}
+
+.content-section.alt-bg {
+    background: var(--gray-100);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.section-header h2 {
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: var(--gray-600);
+    font-size: 1.1rem;
+}
+
+/* ===================================
+   Timeline (Production Process)
+   =================================== */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gray-300);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.timeline-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 svg {
+    color: var(--primary-color);
+}
+
+.timeline-content p {
+    color: var(--gray-600);
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-content ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    color: var(--gray-700);
+    font-size: 0.95rem;
+}
+
+.timeline-content ul li svg {
+    color: var(--secondary-color);
+    width: 14px;
+    flex-shrink: 0;
+}
+
+/* ===================================
+   Cards Grid (Equipment, Certificates)
+   =================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.info-card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Cart Sidebar */
 .cart-sidebar {
     position: fixed;
@@ -1953,6 +2122,14 @@ h4 {
         width: 45px;
         height: 45px;
     }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -2004,6 +2181,25 @@ h4 {
 
     .industries-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-marker {
+        left: -30px;
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .timeline-content {
+        padding: 20px;
     }
 
     .stats-grid {
