@@ -2326,6 +2326,13 @@ h4 {
     font-size: 2rem;
 }
 
+.custom-order-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+}
+
 .custom-order-form label {
     font-weight: 500;
     margin-top: 10px;
@@ -2342,6 +2349,10 @@ h4 {
 .file-upload {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.custom-order-form button {
+    margin-top: 20px;
 }
 
 .custom-order-checkbox {
@@ -2800,11 +2811,17 @@ h4 {
 
 .ral-color {
     text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.ral-color:hover {
+    transform: scale(1.05);
 }
 
 .color-swatch {
-    width: 60px;
-    height: 60px;
+    height: 80px;
     border-radius: 8px;
     margin: 0 auto 10px;
     border: 2px solid var(--gray-300);
@@ -2818,6 +2835,7 @@ h4 {
 }
 
 .ral-color small {
+    display: block;
     color: var(--gray-500);
     font-size: 0.75rem;
 }

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
+import {
   faCompassDrafting, faRulerCombined, faCircleDot, faShapes,
   faPalette, faPuzzlePiece, faFileUpload, faSearch, faHandshake,
   faIndustry, faBoxes, faClock, faRubleSign, faPaperPlane, faCloudUploadAlt
@@ -129,61 +129,63 @@ export default function CustomOrdersPage() {
             <form id="customOrderForm" className="custom-order-form">
               <div className="form-row">
                 <div className="form-group">
-                  <label>Ваше имя *</label>
-                  <input type="text" name="name" required />
+                  <label htmlFor="name">Ваше имя *</label>
+                  <input id="name" type="text" name="name" required />
                 </div>
                 <div className="form-group">
-                  <label>Компания</label>
-                  <input type="text" name="company" />
+                  <label htmlFor="company">Компания</label>
+                  <input id="company" type="text" name="company" />
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label>Email *</label>
-                  <input type="email" name="email" required />
+                  <label htmlFor="email">Email *</label>
+                  <input id="email" type="email" name="email" required />
                 </div>
                 <div className="form-group">
-                  <label>Телефон *</label>
-                  <input type="tel" name="phone" required />
+                  <label htmlFor="phone">Телефон *</label>
+                  <input id="phone" type="tel" name="phone" required />
                 </div>
               </div>
               <div className="form-group">
-                <label>Описание задачи *</label>
-                <textarea 
-                  name="description" 
-                  rows={4} 
-                  placeholder="Опишите, какие элементы вам нужны, особенности конструкции, область применения..." 
-                  required 
+                <label htmlFor="description">Описание задачи *</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows={4}
+                  placeholder="Опишите, какие элементы вам нужны, особенности конструкции, область применения..."
+                  required
                 />
               </div>
-              <div className="form-group">
-                <label>Прикрепить файлы</label>
+              <div className="form-group" style={{ marginTop: 20}}>
+                <label htmlFor="files">Прикрепить файлы</label>
                 <div className="file-upload">
                   <FontAwesomeIcon icon={faCloudUploadAlt} />
                   <p>Перетащите файлы сюда или нажмите для выбора</p>
                   <p style={{ fontSize: '0.85rem', color: '#6c757d' }}>
                     Поддерживаемые форматы: PDF, DWG, DXF, STEP, IGS, JPEG, PNG
                   </p>
-                  <input 
-                    type="file" 
-                    name="files" 
-                    multiple 
-                    accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.jpg,.jpeg,.png" 
+                  <input
+                    id="files"
+                    type="file"
+                    name="files"
+                    multiple
+                    accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.jpg,.jpeg,.png"
                   />
                 </div>
               </div>
-              <div className="form-row">
+              <div className="form-row" style={{ marginTop: 20}}>
                 <div className="form-group">
-                  <label>Количество (шт)</label>
-                  <input type="number" name="quantity" min={1} placeholder="Укажите количество" />
+                  <label htmlFor="quantity">Количество (шт)</label>
+                  <input id="quantity" type="number" name="quantity" min={1} placeholder="Укажите количество" />
                 </div>
                 <div className="form-group">
-                  <label>Желаемый срок</label>
-                  <input type="text" name="deadline" placeholder="Например: 2 недели" />
+                  <label htmlFor="deadline">Желаемый срок</label>
+                  <input id="deadline" type="text" name="deadline" placeholder="Например: 2 недели" />
                 </div>
               </div>
-              <div className="form-group">
-                <label>Дополнительные требования</label>
+              <div className="form-group" style={{ marginTop: 40}}>
+                <p>Дополнительные требования</p>
                 <div className="checkbox-group">
                   <div className="checkbox-item custom-order-checkbox">
                     <input type="checkbox" id="consultation" name="requirements[]" value="consultation" />
@@ -207,7 +209,7 @@ export default function CustomOrdersPage() {
         <div className="container">
           <div className="section-header">
             <h2>Палитра цветов RAL</h2>
-            <p>Популярные цвета для чистых помещений. По запросу доступна полная палитра RAL.</p>
+            <p>Популярные цвета для профилей. По запросу доступна полная палитра RAL.</p>
           </div>
 
           <div className="ral-palette">
