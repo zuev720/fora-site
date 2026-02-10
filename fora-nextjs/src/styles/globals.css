@@ -845,14 +845,21 @@ h4 {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 10px;
+    display: inline;
+}
+
+.stat-suffix {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline;
 }
 
 .stat-label {
     font-size: 1rem;
     opacity: 0.9;
+    margin-top: 5px;
 }
 
 /* Production Process */
