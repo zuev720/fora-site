@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCompassDrafting, faRulerCombined, faCircleDot, faShapes,
   faPalette, faPuzzlePiece, faFileUpload, faSearch, faHandshake,
-  faIndustry, faBoxes, faClock, faRubleSign, faPaperPlane, faCloudUploadAlt
+  faIndustry, faBoxes, faClock, faRubleSign
 } from '@fortawesome/free-solid-svg-icons';
+import CustomOrderForm from '@/components/CustomOrderForm';
 
 export const metadata: Metadata = {
   title: 'Индивидуальные заказы | ООО "Фора" - Изготовление по чертежам',
@@ -126,80 +127,7 @@ export default function CustomOrdersPage() {
           </div>
 
           <div className="contact-form" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <form id="customOrderForm" className="custom-order-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name">Ваше имя *</label>
-                  <input id="name" type="text" name="name" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="company">Компания</label>
-                  <input id="company" type="text" name="company" />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="email">Email *</label>
-                  <input id="email" type="email" name="email" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="phone">Телефон *</label>
-                  <input id="phone" type="tel" name="phone" required />
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="description">Описание задачи *</label>
-                <textarea
-                  id="description"
-                  name="description"
-                  rows={4}
-                  placeholder="Опишите, какие элементы вам нужны, особенности конструкции, область применения..."
-                  required
-                />
-              </div>
-              <div className="form-group" style={{ marginTop: 20}}>
-                <label htmlFor="files">Прикрепить файлы</label>
-                <div className="file-upload">
-                  <FontAwesomeIcon icon={faCloudUploadAlt} />
-                  <p>Перетащите файлы сюда или нажмите для выбора</p>
-                  <p style={{ fontSize: '0.85rem', color: '#6c757d' }}>
-                    Поддерживаемые форматы: PDF, DWG, DXF, STEP, IGS, JPEG, PNG
-                  </p>
-                  <input
-                    id="files"
-                    type="file"
-                    name="files"
-                    multiple
-                    accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.jpg,.jpeg,.png"
-                  />
-                </div>
-              </div>
-              <div className="form-row" style={{ marginTop: 20}}>
-                <div className="form-group">
-                  <label htmlFor="quantity">Количество (шт)</label>
-                  <input id="quantity" type="number" name="quantity" min={1} placeholder="Укажите количество" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="deadline">Желаемый срок</label>
-                  <input id="deadline" type="text" name="deadline" placeholder="Например: 2 недели" />
-                </div>
-              </div>
-              <div className="form-group" style={{ marginTop: 40}}>
-                <p>Дополнительные требования</p>
-                <div className="checkbox-group">
-                  <div className="checkbox-item custom-order-checkbox">
-                    <input type="checkbox" id="consultation" name="requirements[]" value="consultation" />
-                    <label htmlFor="consultation">Нужна техническая консультация</label>
-                  </div>
-                </div>
-              </div>
-              <button type="submit" className="btn btn-primary btn-block">
-                <FontAwesomeIcon icon={faPaperPlane} /> Отправить запрос
-              </button>
-              <p className="form-note">
-                Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-              </p>
-            </form>
+            <CustomOrderForm />
           </div>
         </div>
       </section>

@@ -29,8 +29,9 @@ import {
   faUtensils,
   faMicrochip,
   faPlus,
+  faMinus,
 } from '@fortawesome/free-solid-svg-icons';
-import { Product } from '@/data/products';
+import { Product, POWDER_COATING_PRICE, formatPrice } from '@/data/products';
 import { useCart } from '@/components/LayoutWrapper';
 
 interface ProductDetailProps {
@@ -49,14 +50,30 @@ const tabs = [
 export default function ProductDetail({ product, relatedProducts }: ProductDetailProps) {
   const [activeTab, setActiveTab] = useState('description');
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [hasPowderCoating, setHasPowderCoating] = useState(false);
   const { addItem } = useCart();
+
+  const unitPrice = hasPowderCoating ? product.basePrice + POWDER_COATING_PRICE : product.basePrice;
+  const totalPrice = unitPrice * quantity;
+
+  const handleQuantityChange = (value: number) => {
+    const newQty = Math.min(Math.max(value, 1), 4000);
+    setQuantity(newQty);
+  };
 
   const handleAddToCart = () => {
     addItem({
       id: product.id,
       name: product.name,
       specs: product.specs,
+      quantity,
+      basePrice: product.basePrice,
+      hasPowderCoating,
     });
+    // Reset form
+    setQuantity(1);
+    setHasPowderCoating(false);
   };
 
   return (
@@ -111,22 +128,83 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
             <div className="product-key-specs">
               <h4>Ключевые характеристики:</h4>
               <ul>
-                <li><FontAwesomeIcon icon={faCheck} /> Радиус скругления: <strong>{product.specs.replace('R', '')} мм</strong></li>
-                <li><FontAwesomeIcon icon={faCheck} /> Материал: <strong>Алюминиевый сплав АД31</strong></li>
-                <li><FontAwesomeIcon icon={faCheck} /> Покрытие: <strong>Порошковая окраска RAL 9016</strong></li>
+                <li><FontAwesomeIcon icon={faCheck} /> Радиус скругления: <strong>{product.radiusValue} мм</strong></li>
+                <li><FontAwesomeIcon icon={faCheck} /> Материал: <strong>{product.material}</strong></li>
                 <li><FontAwesomeIcon icon={faCheck} /> Класс чистоты: <strong>ISO 5-8 (GMP A-D)</strong></li>
               </ul>
             </div>
 
+            {/* Coating Toggle */}
+            <div className="product-coating-detail">
+              <span className="coating-label">Покрытие:</span>
+              <div className="coating-toggle">
+                <button 
+                  className={`coating-btn ${!hasPowderCoating ? 'active' : ''}`}
+                  onClick={() => setHasPowderCoating(false)}
+                  type="button"
+                >
+                  Без покрытия
+                </button>
+                <button 
+                  className={`coating-btn ${hasPowderCoating ? 'active' : ''}`}
+                  onClick={() => setHasPowderCoating(true)}
+                  type="button"
+                >
+                  Порошковая окраска (+{POWDER_COATING_PRICE}₽)
+                </button>
+              </div>
+            </div>
+
+            {/* Quantity Selector */}
+            <div className="product-quantity-detail">
+              <span className="qty-label">Количество:</span>
+              <div className="qty-input-group">
+                <button 
+                  className="qty-btn"
+                  onClick={() => handleQuantityChange(quantity - 1)}
+                  disabled={quantity <= 1}
+                  type="button"
+                >
+                  <FontAwesomeIcon icon={faMinus} />
+                </button>
+                <input
+                  type="number"
+                  value={quantity}
+                  onChange={(e) => handleQuantityChange(parseInt(e.target.value) || 1)}
+                  min="1"
+                  max="4000"
+                  className="qty-input"
+                />
+                <button 
+                  className="qty-btn"
+                  onClick={() => handleQuantityChange(quantity + 1)}
+                  disabled={quantity >= 4000}
+                  type="button"
+                >
+                  <FontAwesomeIcon icon={faPlus} />
+                </button>
+              </div>
+              <span className="qty-max">(макс. 4000 шт.)</span>
+            </div>
+
+            {/* Price Block */}
             <div className="product-price-block">
-              <div className="price-label">Цена:</div>
-              <div className="price-value">По запросу</div>
-              <div className="price-note">Зависит от объема заказа</div>
+              <div className="price-row">
+                <span className="price-label">Цена за шт.:</span>
+                <span className="price-value">{formatPrice(unitPrice)}</span>
+              </div>
+              <div className="price-row price-total">
+                <span className="price-label">Итого:</span>
+                <span className="price-value total">{formatPrice(totalPrice)}</span>
+              </div>
+              <div className="price-note">
+                {hasPowderCoating && <span className="coating-note">Включая порошковую окраску RAL 9016</span>}
+              </div>
             </div>
 
             <div className="product-actions-detail">
               <button className="btn btn-primary btn-lg" onClick={handleAddToCart}>
-                <FontAwesomeIcon icon={faFileInvoice} /> Запросить КП
+                <FontAwesomeIcon icon={faFileInvoice} /> В запрос КП
               </button>
               <Link href="/contacts" className="btn btn-outline btn-lg">
                 <FontAwesomeIcon icon={faPhone} /> Получить консультацию
@@ -204,9 +282,9 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                   <table className="specs-table">
                     <tbody>
                       <tr><td>Тип изделия</td><td>{product.type === 'inner-corner' ? 'Угловой соединитель (внутренний угол)' : product.type === 'outer-corner' ? 'Угловой соединитель (внешний угол)' : 'Заглушка торцевая'}</td></tr>
-                      <tr><td>Радиус скругления</td><td>{product.specs.replace('R', '')} мм (±0,5 мм)</td></tr>
-                      <tr><td>Материал основы</td><td>Алюминиевый сплав АД31</td></tr>
-                      <tr><td>Покрытие</td><td>Порошковая полимерная окраска</td></tr>
+                      <tr><td>Радиус скругления</td><td>{product.radiusValue} мм (±0,5 мм)</td></tr>
+                      <tr><td>Материал основы</td><td>{product.material}</td></tr>
+                      <tr><td>Покрытие</td><td>Порошковая полимерная окраска (опционально)</td></tr>
                       <tr><td>Цвет покрытия</td><td>Белый матовый (RAL 9016)</td></tr>
                       <tr><td>Толщина стенки</td><td>1,5 мм</td></tr>
                       <tr><td>Монтажные отверстия</td><td>2 шт., диаметр 6 мм</td></tr>
@@ -277,7 +355,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
               <div className="tab-content active">
                 <div className="tab-content-inner">
                   <div className="documents-download-list">
-                    <a href="#" className="document-download-item">
+                    <a href="/documents/fora-catalog.pdf" download className="document-download-item">
                       <div className="document-icon"><FontAwesomeIcon icon={faFilePdf} /></div>
                       <div className="document-info">
                         <div className="document-name">Технический паспорт</div>
@@ -285,7 +363,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                       </div>
                       <div className="document-action"><FontAwesomeIcon icon={faFileDownload} /></div>
                     </a>
-                    <a href="#" className="document-download-item">
+                    <a href="/documents/fora-catalog.pdf" download className="document-download-item">
                       <div className="document-icon"><FontAwesomeIcon icon={faCertificate} /></div>
                       <div className="document-info">
                         <div className="document-name">Сертификат соответствия</div>
@@ -293,7 +371,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                       </div>
                       <div className="document-action"><FontAwesomeIcon icon={faFileDownload} /></div>
                     </a>
-                    <a href="#" className="document-download-item">
+                    <a href="/documents/fora-catalog.pdf" download className="document-download-item">
                       <div className="document-icon"><FontAwesomeIcon icon={faCube} /></div>
                       <div className="document-info">
                         <div className="document-name">3D-модель STEP</div>
@@ -301,7 +379,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                       </div>
                       <div className="document-action"><FontAwesomeIcon icon={faFileDownload} /></div>
                     </a>
-                    <a href="#" className="document-download-item">
+                    <a href="/documents/fora-catalog.pdf" download className="document-download-item">
                       <div className="document-icon"><FontAwesomeIcon icon={faBook} /></div>
                       <div className="document-info">
                         <div className="document-name">Инструкция по монтажу</div>
@@ -320,17 +398,19 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
         {relatedProducts.length > 0 && (
           <div className="related-products">
             <h2 className="section-title">Сопутствующие товары</h2>
-            <div className="products-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+            <div className="products-grid related-products-grid">
               {relatedProducts.map((relProduct) => (
-                <div key={relProduct.id} className="product-card">
+                <div key={relProduct.id} className="product-card product-card-mini">
                   <div className="product-image">
-                    <Image
-                      src={relProduct.image}
-                      alt={relProduct.name}
-                      width={180}
-                      height={180}
-                      style={{ objectFit: 'contain' }}
-                    />
+                    <Link href={`/catalog/${relProduct.slug}`}>
+                      <Image
+                        src={relProduct.image}
+                        alt={relProduct.name}
+                        width={180}
+                        height={180}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </Link>
                   </div>
                   <div className="product-info">
                     <div className="product-category">{relProduct.category}</div>
@@ -338,10 +418,20 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                       <Link href={`/catalog/${relProduct.slug}`}>{relProduct.name}</Link>
                     </h3>
                     <div className="product-specs"><span>{relProduct.specs}</span></div>
+                    <div className="product-price-row">
+                      <span className="price-label">От:</span>
+                      <span className="price-value">{formatPrice(relProduct.basePrice)}</span>
+                    </div>
                     <div className="product-actions">
                       <button 
                         className="btn btn-primary btn-sm"
-                        onClick={() => addItem({ id: relProduct.id, name: relProduct.name, specs: relProduct.specs })}
+                        onClick={() => addItem({ 
+                          id: relProduct.id, 
+                          name: relProduct.name, 
+                          specs: relProduct.specs,
+                          basePrice: relProduct.basePrice,
+                          hasPowderCoating: false,
+                        })}
                       >
                         <FontAwesomeIcon icon={faPlus} /> В запрос КП
                       </button>

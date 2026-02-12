@@ -28,8 +28,8 @@ import {
   faCertificate,
   faArrowRight,
   faCheck,
-  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
+import QuickRequestForm from '@/components/QuickRequestForm';
 
 export const metadata: Metadata = {
   title: 'ООО "Фора" | Производство алюминиевых соединительных элементов для скругляющих профилей для чистых помещений',
@@ -318,39 +318,7 @@ export default function HomePage() {
               <h2>Быстрый запрос коммерческого предложения</h2>
               <p>Заполните форму и получите КП в течение 2 часов</p>
             </div>
-            <form className="request-form" id="quickRequestForm">
-              <div className="form-row">
-                <div className="form-group">
-                  <input type="text" name="name" placeholder="Ваше имя" required />
-                </div>
-                <div className="form-group">
-                  <input type="text" name="company" placeholder="Компания" />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <input type="email" name="email" placeholder="Email" required />
-                </div>
-                <div className="form-group">
-                  <select name="interest" required>
-                    <option value="">Что вас интересует?</option>
-                    <option value="corner-r50">Угловые соединители R50</option>
-                    <option value="corner-r70">Угловые соединители R70</option>
-                    <option value="wall-floor">Соединители стена-пол</option>
-                    <option value="wall-ceiling">Соединители стена-потолок</option>
-                    <option value="caps">Заглушки торцевые</option>
-                    <option value="custom">Индивидуальный заказ</option>
-                    <option value="consultation">Консультация</option>
-                  </select>
-                </div>
-              </div>
-              <button type="submit" className="btn btn-primary btn-block">
-                <FontAwesomeIcon icon={faPaperPlane} /> Получить КП в течение 2 часов
-              </button>
-              <p className="form-note">
-                Нажимая кнопку, вы соглашаетесь с <Link href="/privacy">политикой конфиденциальности</Link>
-              </p>
-            </form>
+            <QuickRequestForm />
           </div>
         </div>
       </section>

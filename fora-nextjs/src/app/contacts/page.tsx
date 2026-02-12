@@ -3,10 +3,11 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faShoppingCart, faCogs, faBuilding, faMapMarkerAlt,
-  faPhone, faEnvelope, faClock, faRoute, faPaperPlane,
-  faDownload, faMapMarkedAlt, faExternalLinkAlt
+  faPhone, faEnvelope, faClock, faRoute,
+  faMapMarkedAlt, faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import ContactFAQ from './ContactFAQ';
+import { ContactForm, CompanyCardButton } from '@/components/ContactComponents';
 
 export const metadata: Metadata = {
   title: 'Контакты | ООО "Фора" - Свяжитесь с нами',
@@ -131,49 +132,7 @@ export default function ContactsPage() {
               </p>
               
               <div className="contact-form">
-                <form id="contactForm">
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label>Ваше имя *</label>
-                      <input type="text" name="name" required />
-                    </div>
-                    <div className="form-group">
-                      <label>Компания</label>
-                      <input type="text" name="company" />
-                    </div>
-                  </div>
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label>Email *</label>
-                      <input type="email" name="email" required />
-                    </div>
-                    <div className="form-group">
-                      <label>Телефон *</label>
-                      <input type="tel" name="phone" required />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label>Тема обращения</label>
-                    <select name="subject">
-                      <option value="">Выберите тему</option>
-                      <option value="quote">Запрос коммерческого предложения</option>
-                      <option value="consultation">Техническая консультация</option>
-                      <option value="custom">Индивидуальный заказ</option>
-                      <option value="partnership">Партнерство</option>
-                      <option value="other">Другое</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label>Сообщение</label>
-                    <textarea name="message" rows={4} placeholder="Опишите ваш вопрос или задачу..." />
-                  </div>
-                  <button type="submit" className="btn btn-primary btn-block">
-                    <FontAwesomeIcon icon={faPaperPlane} /> Отправить сообщение
-                  </button>
-                  <p className="form-note">
-                    Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                  </p>
-                </form>
+                <ContactForm />
               </div>
             </div>
             
@@ -207,9 +166,7 @@ export default function ContactsPage() {
                   </tbody>
                 </table>
                 
-                <a href="#" className="btn btn-outline" style={{ marginTop: '20px' }}>
-                  <FontAwesomeIcon icon={faDownload} /> Скачать карточку компании
-                </a>
+                <CompanyCardButton />
               </div>
             </div>
           </div>
