@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer'
 
 // Конфигурация транспортера для отправки email
 const transporter = nodemailer.createTransport({
@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: process.env.SMTP_USER || 'zuev720@mail.ru',
-    pass: process.env.SMTP_PASS || '',
+    pass: process.env.SMTP_PASS || 'vrPQ0E8cKso71wJJrZrG',
   },
 });
 
@@ -372,12 +372,12 @@ export async function POST(request: NextRequest) {
 
     // Отправка email
     // В продакшене раскомментировать после настройки SMTP
-    // await transporter.sendMail({
-    //   from: process.env.SMTP_USER || 'zuev720@mail.ru',
-    //   to: RECIPIENT_EMAIL,
-    //   subject,
-    //   html,
-    // });
+    await transporter.sendMail({
+      from: process.env.SMTP_USER || 'zuev720@mail.ru',
+      to: RECIPIENT_EMAIL,
+      subject,
+      html,
+    });
 
     // Для отладки - логируем в консоль
     console.log('='.repeat(50));
