@@ -46,9 +46,10 @@ export function ProductCard({ product }: ProductCardProps) {
           <Image
             src={product.image}
             alt={product.name}
-            width={180}
-            height={180}
-            style={{ objectFit: 'contain' }}
+            width={258}
+            height={194}
+            quality={100}
+            style={{ objectFit: 'cover' }}
           />
         </Link>
         {product.badge && <span className="product-badge">{product.badge}</span>}

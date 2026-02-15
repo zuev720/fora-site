@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const categories = [
   {
     href: '/catalog',
-    image: '/Create_a_professional_product_photography_composit-1769874922647.png',
+    image: '/vnutrennie_ugolki_vse_proffesional.webp',
     alt: 'Угловые соединители для скругляющего профиля радиусом R40 / R50 / R55 / R65 / R70 для внутренних углов',
     title: 'Соединители для внутренних углов',
     description: 'Угловые соединители для скругляющего профиля R40 / R50 / R55 / R65 / R70',
@@ -50,7 +50,7 @@ const categories = [
   },
   {
     href: '/catalog',
-    image: '/plug50.png',
+    image: '/zaglushki_vse_proffesional.webp',
     alt: 'Торцевые заглушки для скругляющего профиля радиусом R40 / R50 / R55 / R70',
     title: 'Заглушки торцевые',
     description: 'Торцевые заглушки для скругляющего профиля радиусом R40 / R50 / R55 / R70',
@@ -58,7 +58,7 @@ const categories = [
   },
   {
     href: '/catalog',
-    image: '/outer-corner70.png',
+    image: '/naruzhnye_all_proffesional.webp',
     alt: 'Угловые соединители для скругляющего профиля радиусом R40 / R50 / R55 / R65 / R70 для внешних углов',
     title: 'Соединители для внешних углов',
     description: 'Угловые соединители для скругляющего профиля R40 / R50 / R55 / R65 / R70 для внешних углов',
@@ -196,6 +196,7 @@ export default function HomePage() {
                   <Image
                     src={cat.image}
                     alt={cat.alt}
+                    quality={100}
                     width={200}
                     height={220}
                     style={{ objectFit: 'cover' }}

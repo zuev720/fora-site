@@ -66,8 +66,8 @@ ul {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    /* max-width: 100%;
+    height: auto; */
 }
 
 /* Container */
@@ -1432,7 +1432,7 @@ h4 {
 }
 
 .product-image {
-    height: 200px;
+    /* height: 258px; */
     background: var(--gray-100);
     display: flex;
     align-items: center;
@@ -1441,6 +1441,11 @@ h4 {
     padding: 15px;
     overflow: hidden;
 }
+
+/* .product-image img {
+    min-width: 100%;
+    min-height: 100%;
+} */
 
 .product-card:hover .product-image img {
     transform: scale(1.05);

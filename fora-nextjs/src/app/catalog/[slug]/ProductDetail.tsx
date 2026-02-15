@@ -88,7 +88,8 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                 alt={product.name}
                 width={500}
                 height={500}
-                style={{ objectFit: 'contain' }}
+                quality={100}
+                style={{ objectFit: 'cover' }}
                 priority
               />
               <button 
@@ -408,6 +409,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                         alt={relProduct.name}
                         width={180}
                         height={180}
+                        quality={100}
                         style={{ objectFit: 'contain' }}
                       />
                     </Link>
@@ -469,7 +471,8 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
             alt={product.name}
             width={800}
             height={800}
-            style={{ objectFit: 'contain' }}
+            quality={100}
+            style={{ objectFit: 'cover' }}
           />
         </div>
       )}
