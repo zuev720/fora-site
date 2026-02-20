@@ -1467,16 +1467,19 @@ h4 {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     flex: 1;
 }
 
 .product-category {
+    flex:auto;
     font-size: 0.8rem;
     color: var(--gray-500);
     margin-bottom: 5px;
 }
 
 .product-name {
+    flex:auto;
     font-size: 1rem;
     margin-bottom: 10px;
     line-height: 1.4;
@@ -1669,7 +1672,6 @@ h4 {
 .product-actions {
     display: flex;
     gap: 10px;
-    margin-top: auto;
     flex-direction: column;
 }
 

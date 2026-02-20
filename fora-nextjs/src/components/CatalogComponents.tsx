@@ -92,7 +92,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         
         <div className="product-price-row">
-          <span className="price-label">Цена:</span>
+          <span className="price-label">Цена:   без НДС</span>
           <span className="price-value">{formatPrice(unitPrice)}</span>
         </div>
         
