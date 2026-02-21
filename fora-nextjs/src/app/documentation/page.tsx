@@ -141,11 +141,11 @@ export default function DocumentationPage() {
       <section className="content-section">
         <div className="container">
           <div className="catalog-download-banner">
-            <div>
-              <h2 style={{ color: 'white', marginBottom: '10px' }}>Полный каталог продукции 2026</h2>
-              <p style={{ margin: 0, opacity: 0.9 }}>Вся линейка продукции, технические характеристики, таблицы размеров</p>
+            <div className="catalog-banner-content">
+              <h2>Полный каталог продукции 2026</h2>
+              <p>Вся линейка продукции, технические характеристики, таблицы размеров</p>
             </div>
-            <a href="#" className="btn" style={{ background: 'white', color: 'var(--primary-color)' }}>
+            <a href="/documents/fora-catalog.pdf" className="btn catalog-banner-btn">
               <FontAwesomeIcon icon={faDownload} /> Скачать PDF (12 МБ)
             </a>
           </div>
@@ -180,7 +180,7 @@ export default function DocumentationPage() {
                 </div>
                 <h3>{model.title}</h3>
                 <p>{model.desc}</p>
-                <div style={{ marginTop: '15px', display: 'flex', gap: '10px' }}>
+                <div className="document-actions">
                   <a href="#" className="btn btn-outline btn-sm">
                     <FontAwesomeIcon icon={faDownload} /> STEP
                   </a>
@@ -196,7 +196,7 @@ export default function DocumentationPage() {
               </div>
               <h3>Полный архив 3D</h3>
               <p>Все 3D-модели в одном архиве</p>
-              <div style={{ marginTop: '15px', display: 'flex', gap: '10px' }}>
+              <div className="document-actions">
                 <a href="#" className="btn btn-primary btn-sm">
                   <FontAwesomeIcon icon={faDownload} /> Скачать всё (58 МБ)
                 </a>
@@ -213,7 +213,7 @@ export default function DocumentationPage() {
             <h2>Спецификации и инструкции</h2>
           </div>
 
-          <div className="documents-list" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="documents-list documents-list-container">
             {specifications.map((spec, index) => (
               <div key={index} className="document-item">
                 <div className="document-icon">
@@ -239,10 +239,10 @@ export default function DocumentationPage() {
             <h2>Сертификаты и разрешительные документы</h2>
           </div>
 
-          <div className="documents-list" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="documents-list documents-list-container">
             {certificates.map((cert, index) => (
               <div key={index} className="document-item">
-                <div className="document-icon" style={{ background: '#e8f5e9', color: '#28a745' }}>
+                <div className="document-icon document-icon-success">
                   <FontAwesomeIcon icon={cert.icon} />
                 </div>
                 <div className="document-info">

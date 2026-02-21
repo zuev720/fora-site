@@ -35,14 +35,14 @@ export default function ContactFAQ() {
   };
 
   return (
-    <div className="accordion" style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <div className="accordion faq-container">
       {faqItems.map((item, index) => (
         <div key={index} className={`accordion-item ${activeIndex === index ? 'active' : ''}`}>
           <div className="accordion-header" onClick={() => toggleAccordion(index)}>
             <span>{item.question}</span>
             <FontAwesomeIcon icon={faChevronDown} />
           </div>
-          <div className="accordion-content" style={{ display: activeIndex === index ? 'block' : 'none' }}>
+          <div className={`accordion-content ${activeIndex === index ? 'accordion-content-visible' : 'accordion-content-hidden'}`}>
             <p>{item.answer}</p>
           </div>
         </div>

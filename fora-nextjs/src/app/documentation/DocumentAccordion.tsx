@@ -33,12 +33,12 @@ export default function DocumentAccordion({ categories }: DocumentAccordionProps
         <div key={index} className={`accordion-item ${activeIndex === index ? 'active' : ''}`}>
           <div className="accordion-header" onClick={() => toggleAccordion(index)}>
             <span>
-              <FontAwesomeIcon icon={category.icon} style={{ marginRight: '10px', color: 'var(--primary-color)' }} />
+              <FontAwesomeIcon icon={category.icon} className="text-primary mr-10" />
               {category.title}
             </span>
             <FontAwesomeIcon icon={faChevronDown} />
           </div>
-          <div className="accordion-content" style={{ display: activeIndex === index ? 'block' : 'none' }}>
+          <div className={`accordion-content ${activeIndex === index ? 'accordion-content-visible' : 'accordion-content-hidden'}`}>
             <div className="documents-list">
               {category.documents.map((doc, docIndex) => (
                 <div key={docIndex} className="document-item">

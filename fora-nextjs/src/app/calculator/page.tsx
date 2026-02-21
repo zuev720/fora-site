@@ -51,7 +51,7 @@ export default function CalculatorPage() {
           </div>
 
           {/* Info Box */}
-          <div className="info-box" style={{ maxWidth: '900px', margin: '40px auto 0' }}>
+          <div className="info-box calculator-info">
             <p>
               <strong><FontAwesomeIcon icon={faInfoCircle} /> Обратите внимание:</strong>
             </p>

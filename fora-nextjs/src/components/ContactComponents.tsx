@@ -230,7 +230,7 @@ Email: zuev720@mail.ru
   };
 
   return (
-    <button onClick={handleDownload} className="btn btn-outline" style={{ marginTop: '20px' }}>
+    <button onClick={handleDownload} className="btn btn-outline btn-company-card">
       <FontAwesomeIcon icon={faDownload} /> Скачать карточку компании
     </button>
   );

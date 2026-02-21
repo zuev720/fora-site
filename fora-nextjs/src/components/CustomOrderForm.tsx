@@ -173,12 +173,12 @@ export default function CustomOrderForm() {
         />
         {errors.description && <span className="error-text">{errors.description}</span>}
       </div>
-      <div className="form-group" style={{ marginTop: 20 }}>
+      <div className="form-group mt-20">
         <label htmlFor="files">Прикрепить файлы</label>
         <div className="file-upload">
           <FontAwesomeIcon icon={faCloudUploadAlt} />
           <p>Перетащите файлы сюда или нажмите для выбора</p>
-          <p style={{ fontSize: '0.85rem', color: '#6c757d' }}>
+          <p className="file-upload-hint">
             Поддерживаемые форматы: PDF, DWG, DXF, STEP, IGS, JPEG, PNG
           </p>
           <input
@@ -190,7 +190,7 @@ export default function CustomOrderForm() {
           />
         </div>
       </div>
-      <div className="form-row" style={{ marginTop: 20 }}>
+      <div className="form-row mt-20">
         <div className="form-group">
           <label htmlFor="quantity">Количество (шт)</label>
           <input 
@@ -215,7 +215,7 @@ export default function CustomOrderForm() {
           />
         </div>
       </div>
-      <div className="form-group" style={{ marginTop: 40 }}>
+      <div className="form-group mt-40">
         <p>Дополнительные требования</p>
         <div className="checkbox-group">
           <div className="checkbox-item custom-order-checkbox">

@@ -236,7 +236,7 @@ export default function ProductionPage() {
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <div className="certs-action">
             <Link href="/documentation" className="btn btn-primary">
               <FontAwesomeIcon icon={faFilePdf} /> Скачать сертификаты
             </Link>

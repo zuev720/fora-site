@@ -93,7 +93,7 @@ export default function AboutPage() {
                 — от литья алюминиевых заготовок до порошковой окраски готовых изделий — позволяет нам гарантировать 
                 высокое качество и оперативные сроки изготовления.
               </p>
-              <div style={{ display: 'flex', gap: '15px', marginTop: '30px' }}>
+              <div className="about-action-buttons">
                 <Link href="/production" className="btn btn-primary">
                   <FontAwesomeIcon icon={faIndustry} /> Наше производство
                 </Link>
@@ -181,17 +181,17 @@ export default function AboutPage() {
 
           <div className="certificates-grid">
             {certificates.map((cert, index) => (
-              <div key={index} className="info-card" style={{ textAlign: 'center' }}>
+              <div key={index} className="info-card cert-card">
                 <div className="cert-icon-wrapper">
                   <FontAwesomeIcon icon={cert.icon} />
                 </div>
                 <h4>{cert.title}</h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--gray-600)' }}>{cert.desc}</p>
+                <p className="text-small text-muted">{cert.desc}</p>
               </div>
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <div className="certs-action">
             <Link href="/documentation" className="btn btn-primary">
               <FontAwesomeIcon icon={faDownload} /> Скачать сертификаты
             </Link>
@@ -229,7 +229,7 @@ export default function AboutPage() {
               <h2>Готовы к сотрудничеству?</h2>
               <p>Свяжитесь с нами для обсуждения вашего проекта</p>
             </div>
-            <div style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
+            <div className="partners-actions">
               <Link href="/contacts" className="btn btn-primary">
                 <FontAwesomeIcon icon={faPhone} /> Связаться с нами
               </Link>

@@ -97,7 +97,7 @@ export default function ContactsPage() {
                 <a href={`mailto:${card.email}`}>
                   <FontAwesomeIcon icon={faEnvelope} /> {card.email}
                 </a>
-                <p style={{ marginTop: '15px', fontSize: '0.9rem', color: 'var(--gray-500)' }}>
+                <p className="contacts-note">
                   <FontAwesomeIcon icon={faClock} /> {card.hours}
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function ContactsPage() {
                 href="https://yandex.ru/maps/?rtext=~55.959958,43.066417&rtt=auto" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ marginTop: '15px', display: 'inline-block' }}
+                className="contacts-email-link"
               >
                 <FontAwesomeIcon icon={faRoute} /> Построить маршрут
               </a>
@@ -127,7 +127,7 @@ export default function ContactsPage() {
           <div className="contacts-grid">
             <div>
               <h2>Форма быстрого запроса</h2>
-              <p style={{ color: 'var(--gray-600)', margin: '15px 0 30px' }}>
+              <p className="contacts-section-desc">
                 Заполните форму и мы свяжемся с вами в течение 2 часов в рабочее время
               </p>
               
@@ -138,27 +138,19 @@ export default function ContactsPage() {
             
             <div>
               <h2>Реквизиты компании</h2>
-              <p style={{ color: 'var(--gray-600)', margin: '15px 0 30px' }}>
+              <p className="contacts-section-desc">
                 Для подготовки договоров и бухгалтерских документов
               </p>
               
               <div className="company-details-card">
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <table className="schedule-table">
                   <tbody>
                     {companyDetails.map((detail, index) => (
                       <tr key={index}>
-                        <td style={{ 
-                          padding: '12px 0', 
-                          borderBottom: index < companyDetails.length - 1 ? '1px solid var(--gray-200)' : 'none', 
-                          color: 'var(--gray-600)' 
-                        }}>
+                        <td className="schedule-day">
                           {detail.label}
                         </td>
-                        <td style={{ 
-                          padding: '12px 0', 
-                          borderBottom: index < companyDetails.length - 1 ? '1px solid var(--gray-200)' : 'none', 
-                          fontWeight: 600 
-                        }}>
+                        <td className="company-details-value">
                           {detail.value}
                         </td>
                       </tr>
@@ -172,24 +164,23 @@ export default function ContactsPage() {
           </div>
 
           {/* Map */}
-          <div style={{ marginTop: '60px' }}>
-            <h2 style={{ marginBottom: '20px' }}>
-              <FontAwesomeIcon icon={faMapMarkedAlt} style={{ color: 'var(--primary-color)', marginRight: '10px' }} />
+          <div className="map-section">
+            <h2>
+              <FontAwesomeIcon icon={faMapMarkedAlt} className="text-primary mr-10" />
               Карта расположения
             </h2>
-            <p style={{ color: 'var(--gray-600)', marginBottom: '20px' }}>
+            <p>
               606100, Нижегородская обл., г. Павлово, ул. Коммунистическая, д. 10
             </p>
-            <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
+            <div className="map-container">
               <iframe 
                 src="https://yandex.ru/map-widget/v1/?ll=43.066417%2C55.959958&z=16&pt=43.066417%2C55.959958%2Cpm2rdm"
                 width="100%" 
                 height="450" 
-                style={{ display: 'block', border: 'none' }}
                 loading="lazy"
               />
             </div>
-            <div style={{ marginTop: '15px', display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+            <div className="map-actions">
               <a 
                 href="https://yandex.ru/maps/?pt=43.066417,55.959958&z=16&l=map" 
                 target="_blank" 

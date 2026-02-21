@@ -30,6 +30,7 @@ import {
   faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import QuickRequestForm from '@/components/QuickRequestForm';
+import HeroCarousel from '@/components/HeroCarousel';
 
 export const metadata: Metadata = {
   title: 'ООО "Фора" | Производство алюминиевых соединительных элементов для скругляющих профилей для чистых помещений',
@@ -140,32 +141,8 @@ const stats = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-text">
-              <h1>Производство алюминиевых соединительных элементов для скругляющих профилей в чистых помещениях</h1>
-              <p className="hero-subtitle">
-                Полный цикл от отливки до порошковой окраски. Угловые соединители, заглушки и индивидуальные
-                решения для фармацевтики, медицины, пищевой промышленности.
-              </p>
-              <div className="hero-buttons">
-                <Link href="#" className="btn btn-primary">
-                  <FontAwesomeIcon icon={faDownload} /> Скачать каталог PDF
-                </Link>
-                <Link href="/contacts" className="btn btn-outline">
-                  <FontAwesomeIcon icon={faComments} /> Получить консультацию
-                </Link>
-                <Link href="/calculator" className="btn btn-outline">
-                  <FontAwesomeIcon icon={faCalculator} /> Рассчитать заказ
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="hero-bg-decoration" />
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel />
 
       {/* Advantages Section */}
       <section className="advantages">

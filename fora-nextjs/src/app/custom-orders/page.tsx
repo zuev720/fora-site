@@ -103,7 +103,7 @@ export default function CustomOrdersPage() {
             <p>Четыре простых шага от идеи до готового продукта</p>
           </div>
 
-          <div className="process-timeline" style={{ marginBottom: 0 }}>
+          <div className="process-timeline process-timeline-compact">
             {processSteps.map((step) => (
               <div key={step.number} className="process-step">
                 <div className="step-number">{step.number}</div>
@@ -126,7 +126,7 @@ export default function CustomOrdersPage() {
             <p>Заполните форму и мы ответим в течение 4 рабочих часов</p>
           </div>
 
-          <div className="contact-form" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="contact-form contact-form-centered">
             <CustomOrderForm />
           </div>
         </div>
@@ -150,9 +150,9 @@ export default function CustomOrdersPage() {
             ))}
           </div>
 
-          <div className="info-box" style={{ maxWidth: '600px', margin: '40px auto 0' }}>
+          <div className="info-box ral-info-box">
             <p><strong>Стандартный цвет:</strong> RAL 9003 (белый сигнальный) — наиболее востребован для чистых помещений</p>
-            <p style={{ marginBottom: 0 }}><strong>Под заказ:</strong> любой цвет по каталогу RAL без ограничений</p>
+            <p className="mb-0"><strong>Под заказ:</strong> любой цвет по каталогу RAL без ограничений</p>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function CustomOrdersPage() {
             <h2>Условия изготовления</h2>
           </div>
 
-          <div className="cards-grid" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div className="cards-grid custom-order-cards">
             {terms.map((term, index) => (
               <div key={index} className="info-card">
                 <div className="info-card-icon">

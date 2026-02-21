@@ -100,7 +100,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                 <FontAwesomeIcon icon={faSearchPlus} />
               </button>
             </div>
-            <button className="btn btn-outline btn-sm" style={{ marginTop: '20px', width: '100%' }}>
+            <button className="btn btn-outline btn-sm btn-download-tech">
               <FontAwesomeIcon icon={faFilePdf} /> Скачать техчертеж (PDF)
             </button>
           </div>
