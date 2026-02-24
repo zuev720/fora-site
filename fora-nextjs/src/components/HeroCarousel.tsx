@@ -37,7 +37,25 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: '/banner-manufacturing.jpg',
+    image: '/engineering-banner-proffesion.webp',
+    title: 'Индивидуальные решения',
+    subtitle: 'Изготовление по вашим чертежам',
+    description: 'Нестандартные радиусы R40-R70, любые размеры, порошковая окраска в любой цвет RAL.',
+    icon: faDraftingCompass,
+    primaryButton: {
+      text: 'Заказать по чертежам',
+      href: '/custom-orders',
+      icon: faDraftingCompass,
+    },
+    secondaryButton: {
+      text: 'Перейти в каталог',
+      href: '/catalog',
+      icon: faComments,
+    },
+  },
+  {
+    id: 2,
+    image: '/banner-manufacturing.webp',
     title: 'Производство полного цикла',
     subtitle: 'От отливки до порошковой окраски',
     description: 'Собственное производство на современных станках с ЧПУ. Точность обработки, контроль качества на каждом этапе.',
@@ -54,8 +72,8 @@ const slides: Slide[] = [
     },
   },
   {
-    id: 2,
-    image: '/banner-cleanroom.jpg',
+    id: 3,
+    image: '/banner-cleanroom.webp',
     title: 'Для чистых помещений',
     subtitle: 'Соответствие стандартам GMP и ISO',
     description: 'Соединительные элементы для фармацевтики, медицины, пищевой промышленности. Класс чистоты ISO 5-8.',
@@ -69,24 +87,6 @@ const slides: Slide[] = [
       text: 'Рассчитать заказ',
       href: '/calculator',
       icon: faCalculator,
-    },
-  },
-  {
-    id: 3,
-    image: '/banner-engineering.jpg',
-    title: 'Индивидуальные решения',
-    subtitle: 'Изготовление по вашим чертежам',
-    description: 'Нестандартные радиусы R40-R70, любые размеры, порошковая окраска в любой цвет RAL.',
-    icon: faDraftingCompass,
-    primaryButton: {
-      text: 'Заказать по чертежам',
-      href: '/custom-orders',
-      icon: faDraftingCompass,
-    },
-    secondaryButton: {
-      text: 'Перейти в каталог',
-      href: '/catalog',
-      icon: faComments,
     },
   },
 ];
