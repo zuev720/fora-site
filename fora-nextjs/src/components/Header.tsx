@@ -32,7 +32,6 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
             <span className="logo-icon">
               <FontAwesomeIcon icon={faCube} />
             </span>
-            <span className="logo-text">ФОРА</span>
           </Link>
 
           <nav className="main-nav">
