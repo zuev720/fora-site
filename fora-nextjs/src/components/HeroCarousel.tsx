@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,8 +12,15 @@ import {
   faDraftingCompass,
   faDownload,
   faComments,
-  faCalculator
+  faCalculator,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
+
+interface SlideButton {
+  text: string;
+  href: string;
+  icon: IconDefinition;
+}
 
 interface Slide {
   id: number;
@@ -21,17 +28,9 @@ interface Slide {
   title: string;
   subtitle: string;
   description: string;
-  icon: typeof faIndustry;
-  primaryButton: {
-    text: string;
-    href: string;
-    icon: typeof faDownload;
-  };
-  secondaryButton: {
-    text: string;
-    href: string;
-    icon: typeof faComments;
-  };
+  icon: IconDefinition;
+  primaryButton: SlideButton;
+  secondaryButton: SlideButton;
 }
 
 const slides: Slide[] = [
@@ -80,7 +79,7 @@ const slides: Slide[] = [
     icon: faShieldAlt,
     primaryButton: {
       text: 'Скачать каталог PDF',
-      href: '/documents/fora-catalog.pdf',
+      href: '/api/generate-catalog',
       icon: faDownload,
     },
     secondaryButton: {
@@ -103,37 +102,40 @@ export default function HeroCarousel() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   }, []);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-    // Resume autoplay after 10 seconds
     setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
+  }, []);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
-  const slide = slides[currentSlide];
+  // Memoize counter display
+  const slideCounter = useMemo(() => ({
+    current: String(currentSlide + 1).padStart(2, '0'),
+    total: String(slides.length).padStart(2, '0'),
+  }), [currentSlide]);
 
   return (
-    <section className="hero-carousel">
-      {/* Background Images */}
-      <div className="carousel-backgrounds">
-        {slides.map((s, index) => (
+    <section className="hero-carousel" aria-label="Баннер карусель">
+      {/* Background Images Layer */}
+      <div className="carousel-backgrounds" aria-hidden="true">
+        {slides.map((slide, index) => (
           <div
-            key={s.id}
+            key={slide.id}
             className={`carousel-bg ${index === currentSlide ? 'active' : ''}`}
           >
             <Image
-              src={s.image}
-              alt={s.title}
+              src={slide.image}
+              alt=""
               fill
               priority={index === 0}
-              quality={90}
+              quality={85}
+              sizes="100vw"
               style={{ objectFit: 'cover' }}
             />
             <div className="carousel-overlay" />
@@ -141,65 +143,93 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="container">
-        <div className="carousel-content">
-          <div className="carousel-badge">
-            <FontAwesomeIcon icon={slide.icon} />
-            <span>{slide.subtitle}</span>
-          </div>
-          
-          <h1 className="carousel-title">{slide.title}</h1>
-          
-          <p className="carousel-description">{slide.description}</p>
-          
-          <div className="carousel-buttons">
-            <Link href={slide.primaryButton.href} className="btn btn-primary btn-lg">
-              <FontAwesomeIcon icon={slide.primaryButton.icon} />
-              {slide.primaryButton.text}
-            </Link>
-            <Link href={slide.secondaryButton.href} className="btn btn-outline btn-lg btn-light">
-              <FontAwesomeIcon icon={slide.secondaryButton.icon} />
-              {slide.secondaryButton.text}
-            </Link>
-          </div>
-        </div>
+      {/* Main Content Layer */}
+      <div className="carousel-wrapper">
+        <div className="container">
+          <div className="carousel-layout">
+            {/* Content Area - Fixed Height Container */}
+            <div className="carousel-content-area">
+              {slides.map((slide, index) => (
+                <div
+                  key={slide.id}
+                  className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
+                  aria-hidden={index !== currentSlide}
+                >
+                  <span className="carousel-badge">
+                    <FontAwesomeIcon icon={slide.icon} />
+                    <span>{slide.subtitle}</span>
+                  </span>
+                  
+                  <h1 className="carousel-title">{slide.title}</h1>
+                  
+                  <p className="carousel-description">{slide.description}</p>
+                  
+                  <div className="carousel-buttons">
+                    <Link 
+                      href={slide.primaryButton.href} 
+                      className="btn btn-primary btn-lg"
+                      tabIndex={index === currentSlide ? 0 : -1}
+                    >
+                      <FontAwesomeIcon icon={slide.primaryButton.icon} />
+                      {slide.primaryButton.text}
+                    </Link>
+                    <Link 
+                      href={slide.secondaryButton.href} 
+                      className="btn btn-outline btn-lg btn-light"
+                      tabIndex={index === currentSlide ? 0 : -1}
+                    >
+                      <FontAwesomeIcon icon={slide.secondaryButton.icon} />
+                      {slide.secondaryButton.text}
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-        {/* Navigation */}
-        <div className="carousel-nav">
-          <button 
-            className="carousel-arrow carousel-prev" 
-            onClick={prevSlide}
-            aria-label="Предыдущий слайд"
-          >
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          
-          <div className="carousel-dots">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => goToSlide(index)}
-                aria-label={`Слайд ${index + 1}`}
-              />
-            ))}
-          </div>
-          
-          <button 
-            className="carousel-arrow carousel-next" 
-            onClick={nextSlide}
-            aria-label="Следующий слайд"
-          >
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
-        </div>
+            {/* Navigation Controls */}
+            <div className="carousel-controls">
+              <nav className="carousel-nav" aria-label="Навигация карусели">
+                <button 
+                  className="carousel-arrow carousel-prev" 
+                  onClick={prevSlide}
+                  aria-label="Предыдущий слайд"
+                  type="button"
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                
+                <div className="carousel-dots" role="tablist">
+                  {slides.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
+                      onClick={() => goToSlide(index)}
+                      aria-label={`Слайд ${index + 1}`}
+                      aria-selected={index === currentSlide}
+                      role="tab"
+                      type="button"
+                    />
+                  ))}
+                </div>
+                
+                <button 
+                  className="carousel-arrow carousel-next" 
+                  onClick={nextSlide}
+                  aria-label="Следующий слайд"
+                  type="button"
+                >
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+              </nav>
 
-        {/* Slide Counter */}
-        <div className="carousel-counter">
-          <span className="current">{String(currentSlide + 1).padStart(2, '0')}</span>
-          <span className="separator">/</span>
-          <span className="total">{String(slides.length).padStart(2, '0')}</span>
+              {/* Slide Counter */}
+              <div className="carousel-counter" aria-live="polite">
+                <span className="current">{slideCounter.current}</span>
+                <span className="separator">/</span>
+                <span className="total">{slideCounter.total}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

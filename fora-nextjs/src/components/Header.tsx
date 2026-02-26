@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCube, faPhone, faFileInvoice, faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { faPhone, faFileInvoice, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const navLinks = [
   { href: '/catalog', label: 'Каталог продукции' },
@@ -29,9 +29,14 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
       <div className="container">
         <div className="header-content">
           <Link href="/" className="logo">
-            <span className="logo-icon">
-              <FontAwesomeIcon icon={faCube} />
-            </span>
+            <Image
+              src="/logo-corner-profile.png"
+              alt="Corner Profile - Соединительные элементы для скругляющих профилей"
+              width={180}
+              height={50}
+              priority
+              className="logo-image"
+            />
           </Link>
 
           <nav className="main-nav">
@@ -53,7 +58,7 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
             <button className="btn-cart" onClick={onCartOpen}>
               <FontAwesomeIcon icon={faFileInvoice} />
               <span>Запрос КП</span>
-              <span className="cart-count">{cartCount}</span>
+              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
             </button>
             <a href="tel:+79092974144" className="header-phone">
               <FontAwesomeIcon icon={faPhone} />
@@ -61,7 +66,7 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
             </a>
           </div>
 
-          <button className="mobile-menu-btn" onClick={onMobileMenuOpen}>
+          <button className="mobile-menu-btn" onClick={onMobileMenuOpen} aria-label="Открыть меню">
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
