@@ -106,21 +106,18 @@ export default function HeroCarousel() {
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-    // Resume autoplay after 10 seconds
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
-  const slide = slides[currentSlide];
-
   return (
     <section className="hero-carousel">
+
       {/* Background Images */}
       <div className="carousel-backgrounds">
         {slides.map((s, index) => (
@@ -141,40 +138,51 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="container">
-        <div className="carousel-content">
-          <div className="carousel-badge">
-            <FontAwesomeIcon icon={slide.icon} />
-            <span>{slide.subtitle}</span>
-          </div>
-          
-          <h1 className="carousel-title">{slide.title}</h1>
-          
-          <p className="carousel-description">{slide.description}</p>
-          
-          <div className="carousel-buttons">
-            <Link href={slide.primaryButton.href} className="btn btn-primary btn-lg">
-              <FontAwesomeIcon icon={slide.primaryButton.icon} />
-              {slide.primaryButton.text}
-            </Link>
-            <Link href={slide.secondaryButton.href} className="btn btn-outline btn-lg btn-light">
-              <FontAwesomeIcon icon={slide.secondaryButton.icon} />
-              {slide.secondaryButton.text}
-            </Link>
-          </div>
-        </div>
+      {/* All slide contents rendered simultaneously, switched via CSS */}
+      <div className="carousel-slides-wrapper">
+        {slides.map((s, index) => (
+          <div
+            key={s.id}
+            className={`carousel-slide-content ${index === currentSlide ? 'active' : ''}`}
+          >
+            <div className="container">
+              <div className="carousel-content">
+                <div className="carousel-badge">
+                  <FontAwesomeIcon icon={s.icon} />
+                  <span>{s.subtitle}</span>
+                </div>
 
-        {/* Navigation */}
+                <h1 className="carousel-title">{s.title}</h1>
+
+                <p className="carousel-description">{s.description}</p>
+
+                <div className="carousel-buttons">
+                  <Link href={s.primaryButton.href} className="btn btn-primary btn-lg">
+                    <FontAwesomeIcon icon={s.primaryButton.icon} />
+                    {s.primaryButton.text}
+                  </Link>
+                  <Link href={s.secondaryButton.href} className="btn btn-outline btn-lg btn-light">
+                    <FontAwesomeIcon icon={s.secondaryButton.icon} />
+                    {s.secondaryButton.text}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation */}
+      <div className="container carousel-controls-container">
         <div className="carousel-nav">
-          <button 
-            className="carousel-arrow carousel-prev" 
+          <button
+            className="carousel-arrow carousel-prev"
             onClick={prevSlide}
             aria-label="Предыдущий слайд"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
-          
+
           <div className="carousel-dots">
             {slides.map((_, index) => (
               <button
@@ -185,9 +193,9 @@ export default function HeroCarousel() {
               />
             ))}
           </div>
-          
-          <button 
-            className="carousel-arrow carousel-next" 
+
+          <button
+            className="carousel-arrow carousel-next"
             onClick={nextSlide}
             aria-label="Следующий слайд"
           >
@@ -202,6 +210,7 @@ export default function HeroCarousel() {
           <span className="total">{String(slides.length).padStart(2, '0')}</span>
         </div>
       </div>
+
     </section>
   );
 }
