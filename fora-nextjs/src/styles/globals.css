@@ -66,8 +66,8 @@ ul {
 }
 
 img {
-    /* max-width: 100%;
-    height: auto; */
+    max-width: 100%;
+    height: auto;
 }
 
 /* Container */
@@ -225,6 +225,15 @@ h4 {
     font-size: 1.35rem;
     color: var(--primary-color);
     flex-shrink: 0;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 56px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    display: block;
 }
 
 .main-nav {
@@ -2623,7 +2632,14 @@ h4 {
     }
 
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-image {
+        height: 50px;
+        max-width: 190px;
     }
 
     .hero-content {
@@ -2823,6 +2839,10 @@ h4 {
         padding: 12px 0;
     }
 
+    .logo-image {
+        height: 44px;
+        max-width: 160px;
+    }
 
     .btn-cart span {
         display: none;

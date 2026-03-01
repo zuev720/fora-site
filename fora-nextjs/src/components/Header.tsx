@@ -33,12 +33,9 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
             <Image
               src="/logo6.svg"
               alt="Corner Profile - Соединительные элементы для скругляющих профилей"
-              width={250}
-              height={80}
-              max-width={250}
-              max-height={80}
+              width={1584}
+              height={672}
               priority
-              style={{ objectFit: 'contain' }}
               className="logo-image"
             />
           </Link>
