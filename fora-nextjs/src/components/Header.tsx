@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCube, faPhone, faFileInvoice, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faFileInvoice, faBars } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const navLinks = [
@@ -29,9 +30,17 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
       <div className="container">
         <div className="header-content">
           <Link href="/" className="logo">
-            <span className="logo-icon">
-              <FontAwesomeIcon icon={faCube} />
-            </span>
+            <Image
+              src="/logo6.svg"
+              alt="Corner Profile - Соединительные элементы для скругляющих профилей"
+              width={250}
+              height={80}
+              max-width={250}
+              max-height={80}
+              priority
+              style={{ objectFit: 'contain' }}
+              className="logo-image"
+            />
           </Link>
 
           <nav className="main-nav">

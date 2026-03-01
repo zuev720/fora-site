@@ -212,7 +212,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 5px 0;
     gap: 15px;
     flex-wrap: nowrap;
 }
@@ -225,18 +225,6 @@ h4 {
     font-size: 1.35rem;
     color: var(--primary-color);
     flex-shrink: 0;
-}
-
-.logo-icon {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 0.9rem;
 }
 
 .main-nav {
@@ -2835,14 +2823,6 @@ h4 {
         padding: 12px 0;
     }
 
-    .logo {
-        font-size: 1.25rem;
-    }
-
-    .logo-icon {
-        width: 35px;
-        height: 35px;
-    }
 
     .btn-cart span {
         display: none;
