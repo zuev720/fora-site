@@ -17,8 +17,10 @@ export default function StickyPanel({
   onChatOpen,
 }: StickyPanelProps) {
   const handleDownloadCatalog = () => {
-    // Trigger download from API endpoint
-    window.location.href = '/api/generate-catalog';
+    const link = document.createElement('a');
+    link.href = '/documents/fora-catalog.pdf';
+    link.download = 'FORA-Catalog-2026.pdf';
+    link.click();
   };
 
   return (
