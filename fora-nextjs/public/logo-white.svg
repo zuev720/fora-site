@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120">
+  <!--
+    ФОРА — Corner Profile  [INVERTED / dark background version]
+    Знак: белый фон иконки → #ffffff фон, тёмный символ
+    Текст: белый
+  -->
+
+  <!-- ════════════ ICON MARK ════════════ -->
+  <!-- Фон знака: белый скруглённый квадрат -->
+  <rect x="0" y="0" width="120" height="120" rx="16" fill="#ffffff" opacity="0.12"/>
+
+  <!-- С-образный символ: три белые полосы -->
+  <rect x="18" y="18" width="76" height="22" rx="5" fill="#ffffff"/>
+  <rect x="18" y="18" width="22" height="84" rx="5" fill="#ffffff"/>
+  <rect x="18" y="80" width="76" height="22" rx="5" fill="#ffffff"/>
+
+  <!-- Акцентный квадрат: светло-синий -->
+  <rect x="54" y="46" width="30" height="30" rx="6" fill="#60a5fa"/>
+
+  <!-- ════════════ WORDMARK ════════════ -->
+
+  <text
+    x="152"
+    y="74"
+    font-family="'Montserrat','Inter','Segoe UI','Arial Black',sans-serif"
+    font-weight="800"
+    font-size="54"
+    fill="#ffffff"
+  >ФОРА</text>
+
+  <rect x="152" y="83" width="316" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+
+  <text
+    x="154"
+    y="103"
+    font-family="'Montserrat','Inter','Segoe UI','Arial',sans-serif"
+    font-weight="400"
+    font-size="13"
+    fill="rgba(255,255,255,0.6)"
+  >СОЕДИНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ</text>
+
+</svg>

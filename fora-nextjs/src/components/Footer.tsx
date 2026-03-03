@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCube, faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   return (
@@ -8,12 +9,15 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <div className="footer-logo">
-              <span className="logo-icon">
-                <FontAwesomeIcon icon={faCube} />
-              </span>
-              <span className="logo-text">ФОРА</span>
-            </div>
+            <Link href="/" className="footer-logo-link">
+              <Image
+                src="/logo-white.svg"
+                alt="ФОРА — Соединительные элементы"
+                width={240}
+                height={60}
+                className="footer-logo-img"
+              />
+            </Link>
             <p>
               Производство алюминиевых соединительных элементов для скругляющих профилей в чистых помещениях с 2019 года
             </p>

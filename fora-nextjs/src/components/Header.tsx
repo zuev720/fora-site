@@ -31,10 +31,10 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
         <div className="header-content">
           <Link href="/" className="logo">
             <Image
-              src="/logo6.svg"
-              alt="Corner Profile - Соединительные элементы для скругляющих профилей"
-              width={1584}
-              height={672}
+              src="/logo.svg"
+              alt="ФОРА — Соединительные элементы для скругляющих профилей"
+              width={480}
+              height={120}
               priority
               className="logo-image"
             />

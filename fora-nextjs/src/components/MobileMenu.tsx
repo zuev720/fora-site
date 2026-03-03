@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCube, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const navLinks = [
   { href: '/catalog', label: 'Каталог продукции' },
@@ -23,7 +24,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     <>
       <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
         <div className="mobile-menu-header">
-          <span className="logo-text">ФОРА</span>
+          <Link href="/" onClick={onClose} className="mobile-menu-logo-link">
+            <Image
+              src="/logo.svg"
+              alt="ФОРА"
+              width={180}
+              height={45}
+              className="mobile-menu-logo"
+            />
+          </Link>
           <button className="mobile-menu-close" onClick={onClose}>
             <FontAwesomeIcon icon={faTimes} />
           </button>

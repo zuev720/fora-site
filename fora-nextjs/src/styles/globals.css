@@ -212,7 +212,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 8px 0;
     gap: 15px;
     flex-wrap: nowrap;
 }
@@ -228,12 +228,38 @@ h4 {
     text-decoration: none;
 }
 
+/* ── Header logo ── */
 .logo-image {
-    height: 56px;
+    height: 60px;       /* viewBox 165px tall → display at 60px, width auto ≈ 211px */
     width: auto;
     max-width: 220px;
     object-fit: contain;
     display: block;
+}
+
+/* ── Footer logo (white variant, dark bg) ── */
+.footer-logo-link {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-logo-img {
+    height: 58px;       /* wider logo fits footer col nicely */
+    width: auto;
+    display: block;
+    max-width: 240px;
+}
+
+/* ── Mobile menu logo ── */
+.mobile-menu-logo-link {
+    display: inline-block;
+}
+
+.mobile-menu-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    max-width: 200px;
 }
 
 .main-nav {
@@ -470,83 +496,89 @@ h4 {
 }
 
 /* ===================================
-   HERO CAROUSEL
+   HERO CAROUSEL  (Swiper v12)
    =================================== */
 
+/* ── Секция-обёртка ─────────────────────────────────────────────────────── */
 .hero-carousel {
     position: relative;
     height: 600px;
     overflow: hidden;
+    background: var(--primary-dark, #001a3d); /* показывается до загрузки картинки */
 }
 
-/* ---- Backgrounds ---- */
-.carousel-backgrounds {
+/* ── SEO-fallback: виден только роботам и до гидратации ─────────────────── */
+.hc-seo-fallback {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ── Swiper-контейнер ────────────────────────────────────────────────────── */
+.hc-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* до инициализации JS показываем первый слайд без эффектов */
+.hc-swiper:not(.swiper-initialized) .swiper-slide:not(:first-child) {
+    display: none;
+}
+
+/* ── Слайд ───────────────────────────────────────────────────────────────── */
+.hc-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ── Фоновое изображение ─────────────────────────────────────────────────── */
+.hc-slide__bg {
     position: absolute;
     inset: 0;
     z-index: 0;
 }
 
-.carousel-bg {
+.hc-slide__overlay {
     position: absolute;
     inset: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-bg.active {
-    opacity: 1;
-}
-
-.carousel-overlay {
-    position: absolute;
-    inset: 0;
+    z-index: 1;
     background: linear-gradient(
         135deg,
         rgba(0, 56, 117, 0.85) 0%,
-        rgba(0, 86, 179, 0.7) 50%,
-        rgba(26, 26, 46, 0.8) 100%
+        rgba(0, 86, 179, 0.70) 50%,
+        rgba(26, 26, 46, 0.80) 100%
     );
 }
 
-/* ---- Slides wrapper: fills the whole carousel, no layout influence ---- */
-.carousel-slides-wrapper {
-    position: absolute;
-    inset: 0;
+/* ── Тело слайда (текст + кнопки) ────────────────────────────────────────── */
+.hc-slide__body {
+    position: relative;
     z-index: 2;
-}
-
-/* Each slide occupies the full area and fades in/out */
-.carousel-slide-content {
-    position: absolute;
-    inset: 0;
+    height: 100%;
     display: flex;
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    opacity: 0;
-    /* slight upward shift while hidden, settles on activation */
-    transform: translateY(12px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    pointer-events: none;
 }
 
-.carousel-slide-content.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.carousel-content {
+.hc-content {
     max-width: 700px;
 }
 
-.carousel-badge {
+/* ── Бейдж ───────────────────────────────────────────────────────────────── */
+.hc-badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 8px 16px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 30px;
     color: var(--white);
     font-size: 0.9rem;
@@ -555,11 +587,12 @@ h4 {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.carousel-badge svg {
+.hc-badge svg {
     font-size: 1rem;
 }
 
-.carousel-title {
+/* ── Заголовок ───────────────────────────────────────────────────────────── */
+.hc-title {
     font-size: 3.5rem;
     font-weight: 800;
     color: var(--white);
@@ -568,7 +601,8 @@ h4 {
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-description {
+/* ── Описание ────────────────────────────────────────────────────────────── */
+.hc-description {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
@@ -576,42 +610,44 @@ h4 {
     max-width: 550px;
 }
 
-.carousel-buttons {
+/* ── Кнопки ──────────────────────────────────────────────────────────────── */
+.hc-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.carousel-buttons .btn-light {
+.hc-buttons .btn-light {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.4);
     color: var(--white);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.carousel-buttons .btn-light:hover {
+.hc-buttons .btn-light:hover {
     background: var(--white);
     border-color: var(--white);
     color: var(--primary-color);
 }
 
-/* ---- Controls container: sits above content, pinned to bottom ---- */
-.carousel-controls-container {
+/* ── Панель управления ───────────────────────────────────────────────────── */
+.hc-controls {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    z-index: 3;
+    z-index: 10;
     pointer-events: none;
 }
 
-.carousel-controls-container > * {
+.hc-controls > * {
     pointer-events: auto;
 }
 
-/* Carousel Navigation */
-.carousel-nav {
+/* ── Навигация (стрелки + точки) ─────────────────────────────────────────── */
+.hc-nav {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -621,7 +657,7 @@ h4 {
     gap: 20px;
 }
 
-.carousel-arrow {
+.hc-arrow {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -634,20 +670,22 @@ h4 {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.carousel-arrow:hover {
+.hc-arrow:hover {
     background: var(--white);
     color: var(--primary-color);
     border-color: var(--white);
 }
 
-.carousel-dots {
+/* ── Точки пагинации ─────────────────────────────────────────────────────── */
+.hc-dots {
     display: flex;
     gap: 10px;
 }
 
-.carousel-dot {
+.hc-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -655,20 +693,21 @@ h4 {
     border: none;
     cursor: pointer;
     transition: var(--transition);
+    padding: 0;
 }
 
-.carousel-dot:hover {
+.hc-dot:hover {
     background: rgba(255, 255, 255, 0.6);
 }
 
-.carousel-dot.active {
+.hc-dot--active {
     background: var(--white);
     width: 35px;
     border-radius: 10px;
 }
 
-/* Carousel Counter */
-.carousel-counter {
+/* ── Счётчик слайдов ─────────────────────────────────────────────────────── */
+.hc-counter {
     position: absolute;
     bottom: 40px;
     right: 0;
@@ -679,37 +718,42 @@ h4 {
     font-family: 'Inter', sans-serif;
 }
 
-.carousel-counter .current {
+.hc-counter__current {
     font-size: 2rem;
     font-weight: 700;
 }
 
-.carousel-counter .separator {
+.hc-counter__sep {
     font-size: 1.2rem;
     opacity: 0.5;
     margin: 0 5px;
 }
 
-.carousel-counter .total {
+.hc-counter__total {
     font-size: 1rem;
     opacity: 0.7;
 }
 
-/* Carousel Responsive */
+/* ── Swiper: сброс встроенной пагинации (не используется) ────────────────── */
+.hc-swiper .swiper-pagination { display: none; }
+.hc-swiper .swiper-button-next,
+.hc-swiper .swiper-button-prev { display: none; }
+
+/* ── Адаптив ─────────────────────────────────────────────────────────────── */
 @media (max-width: 992px) {
     .hero-carousel {
         height: 550px;
     }
 
-    .carousel-title {
+    .hc-title {
         font-size: 2.5rem;
     }
 
-    .carousel-description {
+    .hc-description {
         font-size: 1.1rem;
     }
 
-    .carousel-counter {
+    .hc-counter {
         display: none;
     }
 }
@@ -719,35 +763,35 @@ h4 {
         height: 560px;
     }
 
-    .carousel-slide-content {
+    .hc-slide__body {
         padding-top: 80px;
         padding-bottom: 90px;
         align-items: flex-start;
     }
 
-    .carousel-title {
+    .hc-title {
         font-size: 2rem;
     }
 
-    .carousel-description {
+    .hc-description {
         font-size: 1rem;
         margin-bottom: 25px;
     }
 
-    .carousel-buttons {
+    .hc-buttons {
         flex-direction: column;
     }
 
-    .carousel-buttons .btn {
+    .hc-buttons .btn {
         width: 100%;
         justify-content: center;
     }
 
-    .carousel-nav {
+    .hc-nav {
         bottom: 25px;
     }
 
-    .carousel-arrow {
+    .hc-arrow {
         width: 38px;
         height: 38px;
     }
@@ -864,23 +908,16 @@ h4 {
     margin-bottom: 40px;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Footer brand */
+.footer-logo-link {
+    display: inline-block;
     margin-bottom: 20px;
 }
 
-.footer-logo .logo-icon {
-    width: 35px;
-    height: 35px;
-}
-
-.footer-logo .logo-text {
-    color: var(--white);
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 2px;
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .footer-col p {
@@ -2666,8 +2703,8 @@ h4 {
     }
 
     .logo-image {
-        height: 50px;
-        max-width: 190px;
+        height: 52px;
+        max-width: 195px;
     }
 
     .hero-content {
@@ -2869,7 +2906,7 @@ h4 {
 
     .logo-image {
         height: 44px;
-        max-width: 160px;
+        max-width: 165px;
     }
 
     .btn-cart span {
