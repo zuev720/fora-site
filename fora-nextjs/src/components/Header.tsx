@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faFileInvoice, faBars } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import { useState } from 'react';
 
 const navLinks = [
   { href: '/catalog', label: 'Каталог продукции' },
@@ -32,15 +31,15 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
           <Link href="/" className="logo">
             <Image
               src="/logo.svg"
-              alt="Corner Profile - Соединительные элементы для скругляющих профилей"
-              width={200}
-              height={100}
+              alt="Уголки для профиля — Соединительные элементы для чистых помещений"
+              width={1024}
+              height={1024}
               priority
               className="logo-image"
             />
-            <div className='logo-text-wrapper'>
+            <div className="logo-text-wrapper">
               <span className="logo-text-first">Уголки для профиля</span>
-              <span className="logo-text-second">Соединительные элементы для чистых помещений</span>
+              <span className="logo-text-second">Соединительные элементы для чистых помещений</span>
             </div>
           </Link>
 
