@@ -185,7 +185,6 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                   <FontAwesomeIcon icon={faPlus} />
                 </button>
               </div>
-              <span className="qty-max">(макс. 4000 шт.)</span>
             </div>
 
             {/* Price Block */}
@@ -199,7 +198,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                 <span className="price-value total">{formatPrice(totalPrice)}</span>
               </div>
               <div className="price-note">
-                {hasPowderCoating && <span className="coating-note">Включая порошковую окраску RAL 9016</span>}
+                {hasPowderCoating && <span className="coating-note">Включая порошковую окраску</span>}
               </div>
             </div>
 
