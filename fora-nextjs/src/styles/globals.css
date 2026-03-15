@@ -4209,7 +4209,12 @@ h4 {
         gap: 40px;
     }
 
+    .about-action-buttons {
+        flex-direction: column;
+    }
+
     .contact-cards {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -4221,6 +4226,11 @@ h4 {
 @media (max-width: 992px) {
     .about-intro-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-action-buttons {
+        display: flex;
+        flex-direction: column;
     }
 
     .contacts-grid {
@@ -4268,7 +4278,13 @@ h4 {
 
 @media (max-width: 768px) {
     .contact-cards {
+        display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .about-action-buttons {
+        display: flex;
+        flex-direction: column;
     }
 
     .certificates-grid {
@@ -4310,6 +4326,12 @@ h4 {
 }
 
 @media (max-width: 480px) {
+
+    .about-action-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
     .certificates-grid {
         grid-template-columns: 1fr;
     }
