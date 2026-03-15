@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faShoppingCart, faCogs, faBuilding, faMapMarkerAlt,
+  faShoppingCart, faCogs, faMapMarkerAlt,
   faPhone, faEnvelope, faClock, faRoute,
   faMapMarkedAlt, faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import ContactFAQ from './ContactFAQ';
-import { ContactForm, CompanyCardButton } from '@/components/ContactComponents';
+import { ContactForm } from '@/components/ContactComponents';
 
 export const metadata: Metadata = {
   title: 'Контакты | ООО "Фора" - Свяжитесь с нами',
@@ -36,31 +36,10 @@ const contactCards = [
     icon: faCogs,
     title: 'Технический отдел',
     description: 'Технические консультации, помощь с чертежами, индивидуальные заказы',
-    phones: ['+7 (909) 297-41-44'],
-    email: 'zuev621@mail.ru',
+    phones: ['+7 (909) 297-41-44', '+7 (920) 057-10-12'],
+    email: 'zuev720@mail.ru',
     hours: 'Пн-Пт: 9:00 - 17:00 (МСК)'
   },
-  {
-    icon: faBuilding,
-    title: 'Приёмная',
-    description: 'Общие вопросы, документооборот, запись на посещение производства',
-    phones: ['+7 (909) 297-41-44'],
-    email: 'zuev621@mail.ru',
-    hours: 'Пн-Пт: 9:00 - 18:00 (МСК)'
-  }
-];
-
-const companyDetails = [
-  { label: 'Полное наименование', value: 'Общество с ограниченной ответственностью "Фора"' },
-  { label: 'Краткое наименование', value: 'ООО "Фора"' },
-  { label: 'ИНН', value: '5252012345' },
-  { label: 'КПП', value: '525201001' },
-  { label: 'ОГРН', value: '1095252001234' },
-  { label: 'Юридический адрес', value: '606100, Нижегородская обл., г. Павлово, ул. Коммунистическая, д. 10' },
-  { label: 'Расчетный счет', value: '40702810100000012345' },
-  { label: 'Банк', value: 'ПАО Сбербанк, г. Нижний Новгород' },
-  { label: 'БИК', value: '042202603' },
-  { label: 'Корр. счет', value: '30101810200000000603' }
 ];
 
 export default function ContactsPage() {
@@ -106,7 +85,7 @@ export default function ContactsPage() {
               <h4>
                 <FontAwesomeIcon icon={faMapMarkerAlt} /> Адрес
               </h4>
-              <p><strong>Производство и офис:</strong></p>
+              <p><strong>Производство:</strong></p>
               <p>606100, Нижегородская область,<br />г. Павлово, ул. Коммунистическая, д. 10</p>
               <a 
                 href="https://yandex.ru/maps/?rtext=~55.959958,43.066417&rtt=auto" 
@@ -133,32 +112,6 @@ export default function ContactsPage() {
               
               <div className="contact-form">
                 <ContactForm />
-              </div>
-            </div>
-            
-            <div>
-              <h2>Реквизиты компании</h2>
-              <p className="contacts-section-desc">
-                Для подготовки договоров и бухгалтерских документов
-              </p>
-              
-              <div className="company-details-card">
-                <table className="schedule-table">
-                  <tbody>
-                    {companyDetails.map((detail, index) => (
-                      <tr key={index}>
-                        <td className="schedule-day">
-                          {detail.label}
-                        </td>
-                        <td className="company-details-value">
-                          {detail.value}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                
-                <CompanyCardButton />
               </div>
             </div>
           </div>
