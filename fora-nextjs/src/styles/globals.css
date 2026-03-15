@@ -754,6 +754,18 @@ h4 {
     .carousel-counter {
         display: none;
     }
+
+    .carousel-slide-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .carousel-slide-content.active {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 768px) {
@@ -762,8 +774,14 @@ h4 {
     }
 
     .carousel-slide-content {
-        padding-top: 80px;
-        padding-bottom: 90px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .carousel-slide-content.active {
+        padding-top: 20px;
+        padding-bottom: 20px;
         align-items: flex-start;
     }
 
@@ -4106,6 +4124,7 @@ h4 {
 .product-cta-block .cta-content {
     max-width: 500px;
 }
+
 .cta-content h2 {
     color: var(--white);
     margin-bottom: 10px;
