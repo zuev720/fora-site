@@ -124,7 +124,6 @@ export function ProductCard({ product }: ProductCardProps) {
               <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>
-          <span className="qty-max">(макс. 4000 шт.)</span>
         </div>
         
         <div className="product-total">

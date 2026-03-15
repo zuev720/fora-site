@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { products, filterProducts } from '@/data/products';
+import { filterProducts } from '@/data/products';
 import { ProductCard, CatalogFilters } from '@/components/CatalogComponents';
 
 export default function CatalogContent() {

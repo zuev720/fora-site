@@ -37,19 +37,19 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: '/engineering-banner-proffesion.webp',
+    image: '/first-image-banner.webp',
     title: 'Уголки для скругляющих профилей',
     subtitle: 'Радиусы R40-R70',
     description: 'Производство соединительных элементов для скругляющих профилей в чистых помещениях',
     icon: faIndustry,
     primaryButton: {
-      text: 'Смотреть производство',
-      href: '/production',
+      text: 'Перейти в каталог',
+      href: '/catalog',
       icon: faIndustry,
     },
     secondaryButton: {
-      text: 'Получить консультацию',
-      href: '/contacts',
+      text: 'Скачать каталог PDF',
+      href: '/documents/fora-catalog.pdf',
       icon: faComments,
     },
   },

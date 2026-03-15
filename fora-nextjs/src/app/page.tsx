@@ -132,10 +132,10 @@ const industries = [
 ];
 
 const stats = [
-  { value: '7+', label: 'лет на рынке' },
+  { value: '10+', label: 'лет на рынке' },
   { value: '500+', label: 'реализованных проектов' },
   { value: '100%', label: 'собственное производство' },
-  { value: '1 неделя', label: 'типовой срок изготовления' },
+  { value: '7 дней', label: 'типовой срок изготовления' },
 ];
 
 export default function HomePage() {
