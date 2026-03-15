@@ -20,7 +20,10 @@ export default function Footer() {
                   className="logo-image"
                 />
               </span>
-              <span className="logo-text">ФОРА</span>
+              <div className="logo-text-wrapper">
+                <span className="logo-text-first">Уголки для профиля</span>
+                <span className="logo-text-second">Соединительные элементы для чистых помещений</span>
+              </div>
             </div>
             <p>
               Производство алюминиевых соединительных элементов для скругляющих профилей в чистых помещениях с 2019 года
