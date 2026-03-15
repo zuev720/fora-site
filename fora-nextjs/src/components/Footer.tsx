@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCube, faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   return (
@@ -10,7 +11,14 @@ export default function Footer() {
           <div className="footer-col">
             <div className="footer-logo">
               <span className="logo-icon">
-                <FontAwesomeIcon icon={faCube} />
+                <Image
+                  src="/logo-footer.svg"
+                  alt="Corner Profile - Соединительные элементы для скругляющих профилей"
+                  width={200}
+                  height={100}
+                  priority
+                  className="logo-image"
+                />
               </span>
               <span className="logo-text">ФОРА</span>
             </div>

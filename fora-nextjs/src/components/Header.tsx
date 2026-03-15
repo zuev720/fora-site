@@ -31,13 +31,17 @@ export default function Header({ onCartOpen, onMobileMenuOpen, cartCount = 0 }: 
         <div className="header-content">
           <Link href="/" className="logo">
             <Image
-              src="/logo6.svg"
+              src="/logo.svg"
               alt="Corner Profile - Соединительные элементы для скругляющих профилей"
-              width={1584}
-              height={672}
+              width={200}
+              height={100}
               priority
               className="logo-image"
             />
+            <div className='logo-text-wrapper'>
+              <span className="logo-text-first">Уголки для профиля</span>
+              <span className="logo-text-second">Соединительные элементы для чистых помещений</span>
+            </div>
           </Link>
 
           <nav className="main-nav">
