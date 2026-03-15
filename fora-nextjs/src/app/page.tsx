@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faDownload,
-  faComments,
-  faCalculator,
   faIndustry,
   faCogs,
   faPalette,
